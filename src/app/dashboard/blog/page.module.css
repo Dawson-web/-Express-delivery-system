@@ -1,0 +1,22 @@
+.scroll::-webkit-scrollbar{
+    width:5px;
+    height:5px;
+  }
+  .scroll::-webkit-scrollbar-track{
+    border-radius:2px;
+  }
+  .scroll::-webkit-scrollbar-thumb{
+    background: #bfbfbf;
+    border-radius:10px;
+  }
+
+  .progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: var(--red);
+    transform-origin: 0%;
+  }
+  
