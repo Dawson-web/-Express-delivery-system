@@ -4,7 +4,7 @@ import axios from "axios";
 import Loading from "@/components/motion/Loading";
 import { useEffect, useState } from "react";
 import IndexCard from "@/components/client/IndexCard";
-import ProfileCard from "@/components/client/ProfileCard";
+import OperationPanel from "@/components/client/OperationPanel";
 import styles from "@/app/dashboard/blog/page.module.css";
 import clsx from "clsx";
 
@@ -23,7 +23,7 @@ export default function Page() {
   return (
     <main className="flex flex-col w-full h-full items-center gap-4 ">
       <div className="row-span-1  w-[95%]  justify-self-center 	 ">
-        <ProfileCard />
+        <OperationPanel />
       </div>
 
       <div
