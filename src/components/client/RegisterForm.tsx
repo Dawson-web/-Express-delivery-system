@@ -35,38 +35,38 @@ export default function RegisterForm() {
     },
     onError(e) {
       console.log(e);
-      alert(e.message);
+      // alert(e.message);
     },
   });
-  const registerMutation = useMutation({
-    mutationFn: (v: RegisterForm) =>
-      $axios.post(
-        "/register",
-        {
-          email: v.email,
-          password: v.password,
-          name: v.username,
-        },
-        {
-          params: {
-            code: v.code,
-          },
-        }
-      ),
-    onSuccess: () => {
-      setPace(2);
-      notifications.show({
-        ...notificationSuccess,
-        message: "账号注册成功",
-      });
-    },
-    onError(e) {
-      notifications.show({
-        ...notificationError,
-        message: e.message,
-      });
-    },
-  });
+  // const registerMutation = useMutation({
+  //   mutationFn: (v: RegisterForm) =>
+  //     $axios.post(
+  //       "/register",
+  //       {
+  //         email: v.email,
+  //         password: v.password,
+  //         name: v.username,
+  //       },
+  //       {
+  //         params: {
+  //           code: v.code,
+  //         },
+  //       }
+  //     ),
+  //   onSuccess: () => {
+  //     setPace(2);
+  //     notifications.show({
+  //       ...notificationSuccess,
+  //       message: "账号注册成功",
+  //     });
+  //   },
+  //   onError(e) {
+  //     notifications.show({
+  //       ...notificationError,
+  //       message: e.message,
+  //     });
+  //   },
+  // });
 
   return (
     <div>
@@ -192,7 +192,7 @@ export default function RegisterForm() {
               );
 
               // prevent default form submission
-              const code = data.code;
+              const code = data.code as unknown as string;
               setRegisterForm({ ...registerForm, code: code });
               getEmailCodeMutation.mutate(registerForm);
               setPace(2);
