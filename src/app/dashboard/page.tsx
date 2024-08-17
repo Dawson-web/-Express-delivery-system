@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default async function Page() {
-  redirect(`/dashboard/blog`); // Navigate to the new post page
+  redirect(`/dashboard/order`); // Navigate to the new post page
 }

@@ -14,7 +14,7 @@ import { NavOpen } from "./Menu/NavOpen";
 import { DarkMode } from "./Menu/DarkMode";
 
 export default function Menu(props: any) {
-  const [option, setOption] = useState<string>("blog");
+  const [option, setOption] = useState<string>("order");
   const { open, setOpen } = props;
 
   function checkOption(options: string) {
@@ -71,13 +71,13 @@ export default function Menu(props: any) {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-            <NavigationMenuItem onClick={() => checkOption("blog")}>
-              <Link href="/dashboard/blog" legacyBehavior passHref>
+            <NavigationMenuItem onClick={() => checkOption("order")}>
+              <Link href="/dashboard/order" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={clsx(navigationMenuTriggerStyle(), {
                     "transition-all duration-300 translate-x-6  border-l-4 border-l-blue-600":
-                      option == "blog",
-                    "transition-[transform] translate-x-0": option !== "blog",
+                      option == "order",
+                    "transition-[transform] translate-x-0": option !== "order",
                   })}
                 >
                   <svg

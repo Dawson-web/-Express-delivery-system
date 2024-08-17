@@ -65,7 +65,7 @@ export default function IndexCard(props: any) {
           </Button>
           <Button className="bg-gray-100 hover:bg-gray-200 border-gray border-[1px] text-black ">
             <Link href={`blog/${index.title}`} legacyBehavior passHref>
-              查看物流
+              查看详情
             </Link>
           </Button>
           <Button className="bg-blue-600 hover:bg-blue-700 text-white">

@@ -26,7 +26,6 @@ export default function DashboardLayout({
       >
         {children}
       </section>
-      <Toaster />
     </main>
   );
 }

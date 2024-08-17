@@ -1,0 +1,19 @@
+"filename", "language", "JSON", "TypeScript JSX", "CSS", "comment", "blank", "total"
+"f:\毕设-快递系统\package-lock.json", "JSON", 5373, 0, 0, 0, 0, 5373
+"f:\毕设-快递系统\package.json", "JSON", 3, 0, 0, 0, 0, 3
+"f:\毕设-快递系统\src\app\dashboard\blog\[slug]\page.tsx", "TypeScript JSX", 0, -40, 0, -5, -8, -53
+"f:\毕设-快递系统\src\app\dashboard\blog\page.module.css", "CSS", 0, 0, -20, 0, -2, -22
+"f:\毕设-快递系统\src\app\dashboard\blog\page.tsx", "TypeScript JSX", 0, -38, 0, 0, -6, -44
+"f:\毕设-快递系统\src\app\dashboard\me\page.tsx", "TypeScript JSX", 0, 11, 0, 0, 3, 14
+"f:\毕设-快递系统\src\app\dashboard\order\[slug]\page.tsx", "TypeScript JSX", 0, 40, 0, 5, 8, 53
+"f:\毕设-快递系统\src\app\dashboard\order\page.module.css", "CSS", 0, 0, 20, 0, 2, 22
+"f:\毕设-快递系统\src\app\dashboard\order\page.tsx", "TypeScript JSX", 0, 38, 0, 0, 6, 44
+"f:\毕设-快递系统\src\app\page.tsx", "TypeScript JSX", 0, 2, 0, 0, 0, 2
+"f:\毕设-快递系统\src\app\seekback\page.tsx", "TypeScript JSX", 0, 9, 0, 0, 2, 11
+"f:\毕设-快递系统\src\components\client\EditUserInfoButton.tsx", "TypeScript JSX", 0, 91, 0, 0, 4, 95
+"f:\毕设-快递系统\src\components\client\IndexCard.tsx", "TypeScript JSX", 0, 20, 0, 0, 0, 20
+"f:\毕设-快递系统\src\components\client\OperationPanel.tsx", "TypeScript JSX", 0, 78, 0, 0, 3, 81
+"f:\毕设-快递系统\src\components\client\ProfileCard.tsx", "TypeScript JSX", 0, -69, 0, -1, 0, -70
+"f:\毕设-快递系统\src\components\client\SeekBackForm.tsx", "TypeScript JSX", 0, 77, 0, 0, 3, 80
+"f:\毕设-快递系统\src\components\client\menu.tsx", "TypeScript JSX", 0, -1, 0, 0, 1, 0
+"Total", "-", 5376, 218, 0, -1, 16, 5609

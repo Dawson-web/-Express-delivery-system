@@ -5,7 +5,7 @@ import Loading from "@/components/motion/Loading";
 import { useEffect, useState } from "react";
 import IndexCard from "@/components/client/IndexCard";
 import OperationPanel from "@/components/client/OperationPanel";
-import styles from "@/app/dashboard/blog/page.module.css";
+import styles from "@/app/dashboard/order/page.module.css";
 import clsx from "clsx";
 
 export default function Page() {

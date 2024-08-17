@@ -5,8 +5,8 @@ import { Cross2Icon } from "@radix-ui/react-icons";
 const DialogDemo = () => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
-      <button className="text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none">
-        Edit profile
+      <button className="text-white hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-blue-600 px-[15px] font-medium leading-none shadow-[0_2px_10px] hover:bg-blue-700 hover:text-gray-100">
+        修改信息
       </button>
     </Dialog.Trigger>
     <Dialog.Portal>
@@ -21,33 +21,60 @@ const DialogDemo = () => (
         <fieldset className="mb-[15px] flex items-center gap-5">
           <label
             className="text-violet11 w-[90px] text-right text-[15px]"
-            htmlFor="name"
+            htmlFor="username"
           >
-            Name
+            用户名
           </label>
           <input
             className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-            id="name"
+            id="username"
             defaultValue="Pedro Duarte"
           />
         </fieldset>
         <fieldset className="mb-[15px] flex items-center gap-5">
           <label
             className="text-violet11 w-[90px] text-right text-[15px]"
-            htmlFor="username"
+            htmlFor="password"
           >
-            Username
+            密码
           </label>
           <input
             className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
-            id="username"
+            id="password"
             defaultValue="@peduarte"
           />
         </fieldset>
+        <fieldset className="mb-[15px] flex items-center gap-5">
+          <label
+            className="text-violet11 w-[90px] text-right text-[15px]"
+            htmlFor="phone_number"
+          >
+            电话
+          </label>
+          <input
+            className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
+            id="phone_number"
+            defaultValue="@peduarte"
+          />
+        </fieldset>
+        <fieldset className="mb-[15px] flex items-center gap-5">
+          <label
+            className="text-violet11 w-[90px] text-right text-[15px]"
+            htmlFor="email"
+          >
+            邮箱
+          </label>
+          <input
+            className="text-violet11 shadow-violet7 focus:shadow-violet8 inline-flex h-[35px] w-full flex-1 items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px]"
+            id="email"
+            defaultValue="@peduarte"
+          />
+        </fieldset>
+
         <div className="mt-[25px] flex justify-end">
           <Dialog.Close asChild>
-            <button className="bg-green4 text-green11 hover:bg-green5 focus:shadow-green7 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-medium leading-none focus:shadow-[0_0_0_2px] focus:outline-none">
-              Save changes
+            <button className="text-white hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-blue-600 px-[15px] font-medium leading-none shadow-[0_2px_10px] hover:bg-blue-700 hover:text-gray-100">
+              保存修改
             </button>
           </Dialog.Close>
         </div>

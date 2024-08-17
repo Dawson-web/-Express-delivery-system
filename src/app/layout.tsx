@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Inter as FontSans } from "next/font/google";
-
+import { MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
 import { cn } from "@/lib/utils";
 import "./globals.css";
+import "@mantine/notifications/styles.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -11,6 +13,7 @@ const fontSans = FontSans({
 });
 
 const inter = Inter({ subsets: ["latin"] });
+import ReactQueryProvider from "./provider/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "Dawson's World",
@@ -27,11 +30,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen bg-background font-sans antialiased bg-cover bg-[url('https://w.wallhaven.cc/full/d6/wallhaven-d6jzdg.jpg')]",
+
           fontSans.variable
         )}
       >
-        {children}
+        <MantineProvider>
+          <Notifications />
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </MantineProvider>
       </body>
     </html>
   );
