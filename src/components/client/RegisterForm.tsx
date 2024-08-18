@@ -6,7 +6,11 @@ import {} from "next/router";
 import { useRouter } from "next/navigation";
 import { $axios } from "@/app/api";
 import { useMutation } from "@tanstack/react-query";
-import { NextResponse } from "next/server";
+import {
+  notificationError,
+  notificationSuccess,
+} from "@/constants/notifications";
+import { notifications } from "@mantine/notifications";
 
 interface RegisterForm {
   username: string;
@@ -32,10 +36,16 @@ export default function RegisterForm() {
       }),
     onSuccess: () => {
       setPace(1);
+      notifications.show({
+        ...notificationSuccess,
+        message: "验证码已发送至邮箱，请查收",
+      });
     },
     onError(e) {
-      console.log(e);
-      alert(e.message);
+      notifications.show({
+        ...notificationError,
+        message: e.message,
+      });
     },
   });
   const registerMutation = useMutation({
@@ -55,10 +65,16 @@ export default function RegisterForm() {
       ),
     onSuccess: () => {
       setPace(2);
+      notifications.show({
+        ...notificationSuccess,
+        message: "账号注册成功",
+      });
     },
     onError(e) {
-      console.log(e);
-      alert(e.message);
+      notifications.show({
+        ...notificationError,
+        message: e.message,
+      });
     },
   });
 

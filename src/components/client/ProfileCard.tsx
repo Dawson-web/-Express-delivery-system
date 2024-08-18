@@ -7,21 +7,88 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image"; // 如果你使用的是Next.js
-
+import { useMutation } from "@tanstack/react-query";
+import { $axios } from "@/app/api";
+import { useQuery } from "@tanstack/react-query";
+import {
+  notificationError,
+  notificationSuccess,
+} from "@/constants/notifications";
+import { notifications } from "@mantine/notifications";
+import { getValidUid, setToken } from "@/app/api/token";
+import { useEffect, useState } from "react";
+import { Upload } from "lucide-react";
 export default function ProfileCard() {
-  const avatarImage = "/avatar.jpeg";
+  const [avatar, setAvatar] = useState();
+  function getAvatar(v: string) {}
+  const { isSuccess, data, refetch } = useQuery({
+    queryKey: ["avatar"],
+    queryFn: () =>
+      $axios.get("/avatar", {
+        params: {
+          uid: getValidUid(),
+        },
+      }),
+  });
+
+  const getAvatarMutation = useMutation({
+    mutationFn: (formData: FormData) =>
+      $axios.post("/avatar", formData, {
+        params: {
+          uid: getValidUid(),
+        },
+      }),
+    onSuccess: (res) => {
+      notifications.show({
+        ...notificationSuccess,
+        message: "头像更新成功",
+      });
+      // 更新成功后重新获取头像数据
+      refetch(); // 触发 useQuery 的重新查询
+    },
+    onError(e) {
+      notifications.show({
+        ...notificationError,
+        message: e.message,
+      });
+    },
+  });
+
+  function UploadAvatar() {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = "image/*";
+    input.click();
+    input.onchange = () => {
+      const file = input.files[0];
+      if (file) {
+        console.log(file);
+        const formData = new FormData();
+        formData.append("file", file);
+        getAvatarMutation.mutate(formData);
+      }
+    };
+  }
 
   return (
     <main className=" gap-4  shadow-xl sm:mt-[8px] mt-[40px]">
       <Card className="cursor-default ">
         <CardHeader>
           <CardTitle className="flex flex-row items-center sm:gap-8 gap-2 text-zinc-700 flex-wrap">
-            <Image
-              src={avatarImage}
+            {/* <Image
+              src="http://47.109.106.254:9000/avatar/1825046541603442689.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20240818%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240818T144721Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b0deb7cc0f77333bc71515460b36b561f957de6d44b7851b3757e9cbf7f8ddeb"
               alt="Dawson's avatar"
               width={80}
               height={80}
               className="rounded-full"
+            /> */}
+            <img
+              src={data?.data.data}
+              alt=""
+              style={{ width: "80px", height: "80px", borderRadius: "50%" }}
+              onClick={() => {
+                UploadAvatar();
+              }}
             />
           </CardTitle>
         </CardHeader>

@@ -6,7 +6,12 @@ import { jd } from "@/utils/jd";
 import { useMutation } from "@tanstack/react-query";
 import { $axios } from "@/app/api";
 import { useRouter } from "next/navigation";
-
+import {
+  notificationError,
+  notificationSuccess,
+} from "@/constants/notifications";
+import { notifications } from "@mantine/notifications";
+import { setToken } from "@/app/api/token";
 interface LoginForm {
   email: string | null;
   username: string | null;
@@ -32,14 +37,18 @@ export default function LoginForm() {
         }
       ),
     onSuccess: (res) => {
-      console.log(res);
-
+      notifications.show({
+        ...notificationSuccess,
+        message: "登录成功",
+      });
+      setToken(res.data.data);
       router.push("/dashboard");
     },
     onError(e) {
-      errorTimes.current = errorTimes.current + 1;
-      console.log(e);
-      alert(e.message);
+      notifications.show({
+        ...notificationError,
+        message: e.message,
+      });
     },
   });
   return (

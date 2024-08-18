@@ -3,7 +3,10 @@ import { Inter } from "next/font/google";
 import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
-
+import { MantineProvider } from "@mantine/core";
+import "@mantine/core/styles.css";
+import { Notifications } from "@mantine/notifications";
+import "@mantine/notifications/styles.css";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -32,7 +35,11 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <ReactQueryProvider>{children}</ReactQueryProvider>{" "}
+        <MantineProvider>
+          <Notifications position="top-center" />
+
+          <ReactQueryProvider>{children}</ReactQueryProvider>
+        </MantineProvider>
       </body>
     </html>
   );

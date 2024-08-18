@@ -1,4 +1,4 @@
 export const apiConfig = {
-  baseUrl: "https://47.109.106.254:8080/user",
-  protectedUrls: [],
+  baseUrl: "http://47.109.106.254:8080/user",
+  unProtectedUrls: ["/verifyCode", "/login", "/register", "/forgetPassword"],
 };

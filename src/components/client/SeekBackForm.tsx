@@ -1,19 +1,82 @@
 "use client";
 import React, { useRef, useState } from "react";
 import * as Form from "@radix-ui/react-form";
+import Link from "next/link";
+import {} from "next/router";
 import { useRouter } from "next/navigation";
+import { $axios } from "@/app/api";
+import { useMutation } from "@tanstack/react-query";
+import {
+  notificationError,
+  notificationSuccess,
+} from "@/constants/notifications";
+import { notifications } from "@mantine/notifications";
 
 interface SeekBackForm {
   email: string;
   password: string;
+  code: string;
 }
 export default function LoginForm() {
   const router = useRouter();
-  const [pace, setPace] = useState(0);
-  const [seekBackForm, setSeekBackForm] = useState<SeekBackForm>();
+  const pace = useRef(0);
+  const [seekBackForm, setSeekBackForm] = useState<SeekBackForm>({
+    email: "",
+    password: "",
+    code: "",
+  });
+
+  const getEmailCodeMutation = useMutation({
+    mutationFn: (v: SeekBackForm) =>
+      $axios.post("/verifyCode", {
+        email: v.email,
+      }),
+    onSuccess: () => {
+      pace.current = pace.current + 1;
+      notifications.show({
+        ...notificationSuccess,
+        message: "验证码已发送至邮箱，请查收",
+      });
+    },
+    onError(e) {
+      notifications.show({
+        ...notificationError,
+        message: e.message,
+      });
+    },
+  });
+  const seekBackMutation = useMutation({
+    mutationFn: (v: SeekBackForm) =>
+      $axios.post(
+        "/forgetPassword",
+        {
+          email: v.email,
+          password: v.password,
+        },
+        {
+          params: {
+            code: v.code,
+          },
+        }
+      ),
+    onSuccess: () => {
+      pace.current = pace.current + 1;
+      notifications.show({
+        ...notificationSuccess,
+        message: "账号注册成功",
+      });
+    },
+    onError(e) {
+      notifications.show({
+        ...notificationError,
+        message: e.message,
+      });
+    },
+  });
+
   return (
     <div>
-      {pace === 0 ? (
+      {pace.current === 0 ? (
         <div>
           <Form.Root
             className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-[2px] "
@@ -21,11 +84,10 @@ export default function LoginForm() {
               const data = Object.fromEntries(
                 new FormData(event.currentTarget)
               );
-              // prevent default form submission
-              console.log(data);
               setSeekBackForm(data as unknown as SeekBackForm);
-              console.log(seekBackForm);
-              setPace(1);
+
+              // prevent default form submission
+              getEmailCodeMutation.mutate(data as unknown as SeekBackForm);
 
               event.preventDefault();
             }}
@@ -106,7 +168,7 @@ export default function LoginForm() {
       ) : (
         ""
       )}
-      {pace === 1 ? (
+      {pace.current === 1 ? (
         <div>
           <Form.Root
             className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-[2px] "
@@ -114,10 +176,10 @@ export default function LoginForm() {
               const data = Object.fromEntries(
                 new FormData(event.currentTarget)
               );
+              const code = data.code as unknown as string;
+              seekBackMutation.mutate({ ...seekBackForm, code: code });
+
               // prevent default form submission
-              const code = data.code;
-              console.log(code);
-              setPace(2);
               event.preventDefault();
             }}
           >
@@ -172,7 +234,7 @@ export default function LoginForm() {
       ) : (
         ""
       )}
-      {pace === 2 ? (
+      {pace.current === 2 ? (
         <div>
           <Form.Root
             className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-[2px] "
