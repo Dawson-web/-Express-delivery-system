@@ -77,9 +77,11 @@ export default function RegisterForm() {
             const data = Object.fromEntries(new FormData(event.currentTarget));
             // prevent default form submission
             console.log(data);
-            setRegisterForm(data as unknown as RegisterForm);
+            // setRegisterForm(data as unknown as RegisterForm);
+            $axios.post("/verifyCode", { email: data.email });
+
             console.log(registerForm);
-            getEmailCodeMutation.mutate(data as unknown as RegisterForm);
+            // getEmailCodeMutation.mutate(data as unknown as RegisterForm);
 
             event.preventDefault();
           }}
@@ -194,7 +196,6 @@ export default function RegisterForm() {
               // prevent default form submission
               const code = data.code as unknown as string;
               setRegisterForm({ ...registerForm, code: code });
-              getEmailCodeMutation.mutate(registerForm);
               setPace(2);
               event.preventDefault();
             }}

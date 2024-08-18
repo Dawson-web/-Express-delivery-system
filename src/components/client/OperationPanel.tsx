@@ -8,13 +8,16 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image"; // 如果你使用的是Next.js
 
-export default function OperationPanel() {
+export default function OperationPanel(props: any) {
   const avatarImage = "/avatar.jpeg";
-
+  const { setOption } = props;
   return (
     <main className=" gap-4  shadow-xl sm:mt-[8px] mt-[40px]">
       <Card className="cursor-default grid grid-cols-3 grid-rows-1 gap-4 h-[200px] p-4">
-        <CardContent className="rounded-lg flex justify-around items-center bg-yellow-400 ">
+        <CardContent
+          className="rounded-lg flex justify-around items-center bg-yellow-400 "
+          onClick={() => setOption("AllOrders")}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="120"
@@ -33,7 +36,10 @@ export default function OperationPanel() {
           </svg>
           <span className="text-white font-bold text-2xl">全部订单</span>
         </CardContent>
-        <CardContent className="rounded-lg flex justify-around items-center bg-blue-600">
+        <CardContent
+          className="rounded-lg flex justify-around items-center bg-blue-600"
+          onClick={() => setOption("SendOrders")}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="120"
@@ -56,7 +62,10 @@ export default function OperationPanel() {
           </svg>
           <span className="text-white font-bold text-2xl">寄件信息</span>
         </CardContent>
-        <CardContent className="rounded-lg flex justify-around items-center bg-purple-600">
+        <CardContent
+          className="rounded-lg flex justify-around items-center bg-purple-600"
+          onClick={() => setOption("AfterSale")}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="120"
