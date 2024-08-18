@@ -1,45 +1,41 @@
 import { apiConfig } from "@/config";
 import axios from "axios";
-import { InvalidTokenError, getValidToken } from "./token";
-import { Api } from "./types";
 
 export const $axios = axios.create({
   baseURL: apiConfig.baseUrl,
   timeout: 5000,
 });
 
-$axios.interceptors.request.use(
-  (config) => {
-    const url = config.url;
+// $axios.interceptors.request.use(
+//   (config) => {
+//     const url = config.url;
 
-    if (url && apiConfig.protectedUrls.some((x) => url.startsWith(x))) {
-      config.headers.Authorization = getValidToken();
-    }
+//     if (url && apiConfig.protectedUrls.some((x) => url.startsWith(x))) {
+//       config.headers.Authorization = getValidToken();
+//     }
 
-    return config;
-  },
-  (error) => Promise.reject(error)
-);
+//     return config;
+//   },
+//   (error) => Promise.reject(error)
+// );
 
 $axios.interceptors.response.use(
   (response) => {
-    if (
-      response.config.responseType &&
-      response.config.responseType !== "json"
-    ) {
-      return response;
-    }
-
-    const respData: Api<unknown> = response.data;
-
-    if (!respData.success) {
-      if (respData.errorMsg === "NOT_LOGIN") {
-        throw new InvalidTokenError();
+    const code = response.status; // 注意这里使用 response.status 获取 HTTP 状态码
+    switch (true) {
+      case code >= 200 && code < 300: {
+        if (response.data.msg != "ok") {
+          return Promise.reject(new Error(`${response.data.msg}`));
+        }
+        return response;
       }
-      throw new Error(respData.errorMsg);
+      case code >= 400 && code < 500:
+        return Promise.reject(new Error(`客户端错误: ${code}`));
+      case code >= 500 && code < 600:
+        return Promise.reject(new Error(`服务器错误: ${code}`));
+      default:
+        return Promise.reject(new Error(`未知错误: ${code}`));
     }
-
-    return response;
   },
   (error) => Promise.reject(error)
 );

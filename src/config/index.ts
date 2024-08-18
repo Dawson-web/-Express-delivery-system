@@ -1,4 +1,4 @@
 export const apiConfig = {
-  baseUrl: "https://5723aw779ac3.vicp.fun/user/",
+  baseUrl: "http://47.109.106.254:8080/user",
   protectedUrls: [],
 };

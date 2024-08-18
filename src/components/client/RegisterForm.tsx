@@ -35,38 +35,32 @@ export default function RegisterForm() {
     },
     onError(e) {
       console.log(e);
-      // alert(e.message);
+      alert(e.message);
     },
   });
-  // const registerMutation = useMutation({
-  //   mutationFn: (v: RegisterForm) =>
-  //     $axios.post(
-  //       "/register",
-  //       {
-  //         email: v.email,
-  //         password: v.password,
-  //         name: v.username,
-  //       },
-  //       {
-  //         params: {
-  //           code: v.code,
-  //         },
-  //       }
-  //     ),
-  //   onSuccess: () => {
-  //     setPace(2);
-  //     notifications.show({
-  //       ...notificationSuccess,
-  //       message: "账号注册成功",
-  //     });
-  //   },
-  //   onError(e) {
-  //     notifications.show({
-  //       ...notificationError,
-  //       message: e.message,
-  //     });
-  //   },
-  // });
+  const registerMutation = useMutation({
+    mutationFn: (v: RegisterForm) =>
+      $axios.post(
+        "/register",
+        {
+          email: v.email,
+          password: v.password,
+          name: v.username,
+        },
+        {
+          params: {
+            code: v.code,
+          },
+        }
+      ),
+    onSuccess: () => {
+      setPace(2);
+    },
+    onError(e) {
+      console.log(e);
+      alert(e.message);
+    },
+  });
 
   return (
     <div>
@@ -77,11 +71,11 @@ export default function RegisterForm() {
             const data = Object.fromEntries(new FormData(event.currentTarget));
             // prevent default form submission
             console.log(data);
-            // setRegisterForm(data as unknown as RegisterForm);
-            $axios.post("/verifyCode", { email: data.email });
+            setRegisterForm(data as unknown as RegisterForm);
+            // $axios.post("/verifyCode", { email: data.email });
 
             console.log(registerForm);
-            // getEmailCodeMutation.mutate(data as unknown as RegisterForm);
+            getEmailCodeMutation.mutate(data as unknown as RegisterForm);
 
             event.preventDefault();
           }}
@@ -195,8 +189,7 @@ export default function RegisterForm() {
 
               // prevent default form submission
               const code = data.code as unknown as string;
-              setRegisterForm({ ...registerForm, code: code });
-              setPace(2);
+              registerMutation.mutate({ ...registerForm, code: code });
               event.preventDefault();
             }}
           >

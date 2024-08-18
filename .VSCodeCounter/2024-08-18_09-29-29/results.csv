@@ -1,0 +1,69 @@
+"filename", "language", "JSON with Comments", "TypeScript", "JavaScript", "JSON", "TypeScript JSX", "CSS", "Markdown", "XML", "comment", "blank", "total"
+"f:\毕设-快递系统\.eslintrc.json", "JSON with Comments", 3, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"f:\毕设-快递系统\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 23, 0, 0, 14, 37
+"f:\毕设-快递系统\components.json", "JSON", 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 17
+"f:\毕设-快递系统\next.config.mjs", "JavaScript", 0, 0, 2, 0, 0, 0, 0, 0, 1, 2, 5
+"f:\毕设-快递系统\package-lock.json", "JSON", 0, 0, 0, 13893, 0, 0, 0, 0, 0, 1, 13894
+"f:\毕设-快递系统\package.json", "JSON", 0, 0, 0, 61, 0, 0, 0, 0, 0, 1, 62
+"f:\毕设-快递系统\postcss.config.mjs", "JavaScript", 0, 0, 6, 0, 0, 0, 0, 0, 1, 2, 9
+"f:\毕设-快递系统\public\next.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"f:\毕设-快递系统\public\vercel.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1
+"f:\毕设-快递系统\src\app\api\index.ts", "TypeScript", 0, 37, 0, 0, 0, 0, 0, 0, 0, 9, 46
+"f:\毕设-快递系统\src\app\api\token.ts", "TypeScript", 0, 62, 0, 0, 0, 0, 0, 0, 0, 11, 73
+"f:\毕设-快递系统\src\app\api\types.ts", "TypeScript", 0, 13, 0, 0, 0, 0, 0, 0, 0, 3, 16
+"f:\毕设-快递系统\src\app\dashboard\control\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 43, 0, 0, 0, 0, 2, 45
+"f:\毕设-快递系统\src\app\dashboard\layout.tsx", "TypeScript JSX", 0, 0, 0, 0, 28, 0, 0, 0, 0, 4, 32
+"f:\毕设-快递系统\src\app\dashboard\links\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 9, 0, 0, 0, 0, 3, 12
+"f:\毕设-快递系统\src\app\dashboard\me\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 11, 0, 0, 0, 0, 3, 14
+"f:\毕设-快递系统\src\app\dashboard\order\[slug]\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 40, 0, 0, 0, 5, 8, 53
+"f:\毕设-快递系统\src\app\dashboard\order\page.module.css", "CSS", 0, 0, 0, 0, 0, 20, 0, 0, 0, 2, 22
+"f:\毕设-快递系统\src\app\dashboard\order\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 17, 0, 0, 0, 0, 3, 20
+"f:\毕设-快递系统\src\app\dashboard\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 4, 0, 0, 0, 0, 2, 6
+"f:\毕设-快递系统\src\app\fonts.ts", "TypeScript", 0, 13, 0, 0, 0, 0, 0, 0, 0, 4, 17
+"f:\毕设-快递系统\src\app\globals.css", "CSS", 0, 0, 0, 0, 0, 56, 0, 0, 0, 21, 77
+"f:\毕设-快递系统\src\app\layout.tsx", "TypeScript JSX", 0, 0, 0, 0, 39, 0, 0, 0, 1, 6, 46
+"f:\毕设-快递系统\src\app\login\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 9, 0, 0, 0, 0, 3, 12
+"f:\毕设-快递系统\src\app\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 10, 0, 0, 0, 0, 1, 11
+"f:\毕设-快递系统\src\app\provider\ReactQueryProvider.tsx", "TypeScript JSX", 0, 0, 0, 0, 9, 0, 0, 0, 0, 5, 14
+"f:\毕设-快递系统\src\app\register\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 9, 0, 0, 0, 0, 2, 11
+"f:\毕设-快递系统\src\app\seekback\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 9, 0, 0, 0, 0, 2, 11
+"f:\毕设-快递系统\src\components\client\AfterSale.tsx", "TypeScript JSX", 0, 0, 0, 0, 30, 0, 0, 0, 0, 4, 34
+"f:\毕设-快递系统\src\components\client\AllOrders.tsx", "TypeScript JSX", 0, 0, 0, 0, 30, 0, 0, 0, 0, 4, 34
+"f:\毕设-快递系统\src\components\client\ArticleDelete.tsx", "TypeScript JSX", 0, 0, 0, 0, 47, 0, 0, 0, 1, 1, 49
+"f:\毕设-快递系统\src\components\client\ArticleUpload.tsx", "TypeScript JSX", 0, 0, 0, 0, 102, 0, 0, 0, 1, 10, 113
+"f:\毕设-快递系统\src\components\client\ControlButton.tsx", "TypeScript JSX", 0, 0, 0, 0, 67, 0, 0, 0, 0, 4, 71
+"f:\毕设-快递系统\src\components\client\EditUserInfoButton.tsx", "TypeScript JSX", 0, 0, 0, 0, 91, 0, 0, 0, 0, 4, 95
+"f:\毕设-快递系统\src\components\client\FriendLink.tsx", "TypeScript JSX", 0, 0, 0, 0, 54, 0, 0, 0, 0, 3, 57
+"f:\毕设-快递系统\src\components\client\FriendLink\LinkCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 40, 0, 0, 0, 0, 5, 45
+"f:\毕设-快递系统\src\components\client\IndexCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 79, 0, 0, 0, 0, 2, 81
+"f:\毕设-快递系统\src\components\client\LoginForm.tsx", "TypeScript JSX", 0, 0, 0, 0, 97, 0, 0, 0, 1, 3, 101
+"f:\毕设-快递系统\src\components\client\Menu\DarkMode.tsx", "TypeScript JSX", 0, 0, 0, 0, 65, 0, 0, 0, 0, 3, 68
+"f:\毕设-快递系统\src\components\client\Menu\NavOpen.tsx", "TypeScript JSX", 0, 0, 0, 0, 55, 0, 0, 0, 0, 3, 58
+"f:\毕设-快递系统\src\components\client\OperationPanel.tsx", "TypeScript JSX", 0, 0, 0, 0, 88, 0, 0, 0, 0, 2, 90
+"f:\毕设-快递系统\src\components\client\ProfileCard.tsx", "TypeScript JSX", 0, 0, 0, 0, 88, 0, 0, 0, 0, 4, 92
+"f:\毕设-快递系统\src\components\client\RegisterForm.tsx", "TypeScript JSX", 0, 0, 0, 0, 259, 0, 0, 0, 34, 9, 302
+"f:\毕设-快递系统\src\components\client\RenderComponent.tsx", "TypeScript JSX", 0, 0, 0, 0, 15, 0, 0, 0, 0, 2, 17
+"f:\毕设-快递系统\src\components\client\SeekBackForm.tsx", "TypeScript JSX", 0, 0, 0, 0, 214, 0, 0, 0, 2, 4, 220
+"f:\毕设-快递系统\src\components\client\SendOrders.tsx", "TypeScript JSX", 0, 0, 0, 0, 85, 0, 0, 0, 1, 2, 88
+"f:\毕设-快递系统\src\components\client\ToMarkdown.tsx", "TypeScript JSX", 0, 0, 0, 0, 20, 0, 0, 0, 0, 2, 22
+"f:\毕设-快递系统\src\components\client\menu.tsx", "TypeScript JSX", 0, 0, 0, 0, 174, 0, 0, 0, 0, 5, 179
+"f:\毕设-快递系统\src\components\client\scroller.module.css", "CSS", 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 11
+"f:\毕设-快递系统\src\components\motion\Loading.tsx", "TypeScript JSX", 0, 0, 0, 0, 64, 0, 0, 0, 0, 13, 77
+"f:\毕设-快递系统\src\components\motion\styles.module.css", "CSS", 0, 0, 0, 0, 0, 54, 0, 0, 0, 10, 64
+"f:\毕设-快递系统\src\components\ui\alert.tsx", "TypeScript JSX", 0, 0, 0, 0, 53, 0, 0, 0, 0, 7, 60
+"f:\毕设-快递系统\src\components\ui\avatar.tsx", "TypeScript JSX", 0, 0, 0, 0, 44, 0, 0, 0, 0, 7, 51
+"f:\毕设-快递系统\src\components\ui\button.tsx", "TypeScript JSX", 0, 0, 0, 0, 52, 0, 0, 0, 0, 7, 59
+"f:\毕设-快递系统\src\components\ui\card.tsx", "TypeScript JSX", 0, 0, 0, 0, 82, 0, 0, 0, 0, 9, 91
+"f:\毕设-快递系统\src\components\ui\input.tsx", "TypeScript JSX", 0, 0, 0, 0, 21, 0, 0, 0, 0, 5, 26
+"f:\毕设-快递系统\src\components\ui\menubar.tsx", "TypeScript JSX", 0, 0, 0, 0, 217, 0, 0, 0, 0, 20, 237
+"f:\毕设-快递系统\src\components\ui\navigation-menu.tsx", "TypeScript JSX", 0, 0, 0, 0, 115, 0, 0, 0, 0, 12, 127
+"f:\毕设-快递系统\src\components\ui\select.tsx", "TypeScript JSX", 0, 0, 0, 0, 146, 0, 0, 0, 0, 15, 161
+"f:\毕设-快递系统\src\components\ui\sonner.tsx", "TypeScript JSX", 0, 0, 0, 0, 26, 0, 0, 0, 0, 6, 32
+"f:\毕设-快递系统\src\components\ui\textarea.tsx", "TypeScript JSX", 0, 0, 0, 0, 20, 0, 0, 0, 0, 5, 25
+"f:\毕设-快递系统\src\config\index.ts", "TypeScript", 0, 4, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"f:\毕设-快递系统\src\constants\notifications.ts", "TypeScript", 0, 17, 0, 0, 0, 0, 0, 0, 0, 5, 22
+"f:\毕设-快递系统\src\lib\utils.ts", "TypeScript", 0, 5, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"f:\毕设-快递系统\src\utils\jd.ts", "TypeScript", 0, 18, 0, 0, 0, 0, 0, 0, 0, 2, 20
+"f:\毕设-快递系统\tailwind.config.ts", "TypeScript", 0, 88, 0, 0, 0, 0, 0, 0, 1, 4, 93
+"f:\毕设-快递系统\tsconfig.json", "JSON with Comments", 26, 0, 0, 0, 0, 0, 0, 0, 0, 1, 27
+"Total", "-", 29, 257, 8, 13971, 2777, 141, 23, 2, 49, 322, 17579

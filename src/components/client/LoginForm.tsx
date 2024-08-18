@@ -3,21 +3,53 @@ import React, { useRef, useState } from "react";
 import * as Form from "@radix-ui/react-form";
 import Link from "next/link";
 import { jd } from "@/utils/jd";
+import { useMutation } from "@tanstack/react-query";
+import { $axios } from "@/app/api";
+import { useRouter } from "next/navigation";
 
-interface loginForm {
-  account: string;
+interface LoginForm {
+  email: string | null;
+  username: string | null;
   password: string;
 }
 
 export default function LoginForm() {
   const errorTimes = useRef(0);
+  const router = useRouter();
+  const loginMutation = useMutation({
+    mutationFn: (v: LoginForm) =>
+      $axios.post(
+        "/token",
+        {
+          email: v.email,
+          username: v.username,
+          password: v.password,
+        },
+        {
+          params: {
+            type: v.email ? "EMAIL_AND_PASSWORD" : "USERNAME_AND_PASSWORD",
+          },
+        }
+      ),
+    onSuccess: (res) => {
+      console.log(res);
+
+      router.push("/dashboard");
+    },
+    onError(e) {
+      errorTimes.current = errorTimes.current + 1;
+      console.log(e);
+      alert(e.message);
+    },
+  });
   return (
     <Form.Root
       className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-[2px] "
       onSubmit={(event) => {
         const data = Object.fromEntries(new FormData(event.currentTarget));
-        const loginForm = jd(data as unknown as loginForm);
+        const loginForm = jd(data);
         // prevent default form submission
+        loginMutation.mutate(loginForm);
         event.preventDefault();
       }}
     >

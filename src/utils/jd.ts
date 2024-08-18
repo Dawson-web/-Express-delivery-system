@@ -4,7 +4,7 @@ interface loginForm {
   password: string;
 }
 
-export function jd(args: { account: string; password: string }) {
+export function jd(args: { account: string; password: string } | any) {
   let res: loginForm = {
     email: null,
     username: null,

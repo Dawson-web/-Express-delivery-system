@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Inter as FontSans } from "next/font/google";
-import { MantineProvider } from "@mantine/core";
-import { Notifications } from "@mantine/notifications";
 import { cn } from "@/lib/utils";
 import "./globals.css";
-import "@mantine/notifications/styles.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -35,10 +32,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <MantineProvider>
-          <Notifications />
-          <ReactQueryProvider>{children}</ReactQueryProvider>
-        </MantineProvider>
+        <ReactQueryProvider>{children}</ReactQueryProvider>{" "}
       </body>
     </html>
   );
