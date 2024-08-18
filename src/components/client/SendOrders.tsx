@@ -12,7 +12,6 @@ export default function SendOrders(props: any) {
         className="w-[360px] sm:w-[95%] bg-gray-200 backdrop-blur p-6 rounded-md border-[2px] shadow-2xl "
         onSubmit={(event) => {
           const data = Object.fromEntries(new FormData(event.currentTarget));
-          const loginForm = jd(data as unknown as loginForm);
           // prevent default form submission
           event.preventDefault();
         }}
