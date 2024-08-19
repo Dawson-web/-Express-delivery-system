@@ -90,7 +90,24 @@ export default function SendOrders(props: any) {
           </p>
           <Form.Field className="grid mb-[10px]" name="file">
             <div className="flex items-baseline justify-between">
-              <Form.Label className="text-[15px] font-medium leading-[35px] ">
+              <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-image-up"
+                >
+                  <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
+                  <path d="m14 19.5 3-3 3 3" />
+                  <path d="M17 22v-5.5" />
+                  <circle cx="9" cy="9" r="2" />
+                </svg>{" "}
                 物品图片
               </Form.Label>
               <Form.Message
@@ -110,7 +127,26 @@ export default function SendOrders(props: any) {
           </Form.Field>
           <Form.Field className="grid mb-[10px]" name="name">
             <div className="flex items-baseline justify-between">
-              <Form.Label className="text-[15px] font-medium leading-[35px] ">
+              <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-notebook-pen"
+                >
+                  <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
+                  <path d="M2 6h4" />
+                  <path d="M2 10h4" />
+                  <path d="M2 14h4" />
+                  <path d="M2 18h4" />
+                  <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" />
+                </svg>{" "}
                 物品名称
               </Form.Label>
               <Form.Message
@@ -129,7 +165,23 @@ export default function SendOrders(props: any) {
           </Form.Field>
           <Form.Field className="grid mb-[10px]" name="currentLocation">
             <div className="flex items-baseline justify-between">
-              <Form.Label className="text-[15px] font-medium leading-[35px] ">
+              <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-map-pinned"
+                >
+                  <path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0" />
+                  <circle cx="12" cy="8" r="2" />
+                  <path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712" />
+                </svg>{" "}
                 当前位置
               </Form.Label>
               <Form.Message
@@ -189,7 +241,7 @@ export default function SendOrders(props: any) {
           </p>
           <Form.Field className="grid mb-[10px]" name="account">
             <div className="flex items-baseline justify-between">
-              <Form.Label className="text-[15px] font-medium leading-[35px] ">
+              <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
                 Email | UserName
               </Form.Label>
               <Form.Message
@@ -209,7 +261,7 @@ export default function SendOrders(props: any) {
           </Form.Field>
           <Form.Field className="grid mb-[10px]" name="password">
             <div className="flex items-baseline justify-between">
-              <Form.Label className="text-[15px] font-medium leading-[35px] ">
+              <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
                 Password
               </Form.Label>
               <Form.Message

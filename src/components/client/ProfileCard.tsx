@@ -99,7 +99,7 @@ export default function ProfileCard() {
         <CardHeader>
           <CardTitle className="flex flex-row items-center sm:gap-8 gap-2 text-zinc-700 flex-wrap">
             {/* <Image
-              src="http://47.109.106.254:9000/avatar/1825046541603442689.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20240818%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240818T144721Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b0deb7cc0f77333bc71515460b36b561f957de6d44b7851b3757e9cbf7f8ddeb"
+              src="http://47.109.106.254:9000/avatar/1825046541603442689.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20240818%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240818T144721Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b0deb7cc0f77333bc724460b36b561f957de6d44b7851b3757e9cbf7f8ddeb"
               alt="Dawson's avatar"
               width={80}
               height={80}
@@ -122,8 +122,8 @@ export default function ProfileCard() {
           <p className=" flex gap-2 items-center w-[260px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -141,46 +141,48 @@ export default function ProfileCard() {
           <p className=" flex gap-2 items-center w-[260px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className=" text-gray-600"
+              class="lucide lucide-id-card"
             >
-              <path d="M18 20a6 6 0 0 0-12 0" />
-              <circle cx="12" cy="10" r="4" />
-              <circle cx="12" cy="12" r="10" />
+              <path d="M16 10h2" />
+              <path d="M16 14h2" />
+              <path d="M6.17 24a3 3 0 0 1 5.66 0" />
+              <circle cx="9" cy="11" r="2" />
+              <rect x="2" y="5" width="20" height="14" rx="2" />
             </svg>
             ID：{userInfo.data?.data.data.id}
           </p>
           <p className=" flex gap-2 items-center w-[260px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className=" text-gray-600"
+              class="lucide lucide-square-user-round"
             >
-              <path d="M18 20a6 6 0 0 0-12 0" />
-              <circle cx="12" cy="10" r="4" />
-              <circle cx="12" cy="12" r="10" />
+              <path d="M18 21a6 6 0 0 0-12 0" />
+              <circle cx="12" cy="11" r="4" />
+              <rect width="18" height="18" x="3" y="3" rx="2" />
             </svg>
             账号：{userInfo.data?.data.data.username}
           </p>
           <p className=" flex gap-2 items-center w-[260px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -196,15 +198,15 @@ export default function ProfileCard() {
 
           <p className="flex gap-2 items-center w-[260px]">
             <svg
-              width="15"
-              height="15"
-              viewBox="0 0 15 15"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="text-yellow-500"
             >
               <path
-                d="M1 2C0.447715 2 0 2.44772 0 3V12C0 12.5523 0.447715 13 1 13H14C14.5523 13 15 12.5523 15 12V3C15 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z"
+                d="M1 2C0.447724 2 0 2.44772 0 3V12C0 12.5523 0.447724 13 1 13H14C14.5523 13 24 12.5523 24 12V3C24 2.44772 14.5523 2 14 2H1ZM1 3L14 3V3.92494C13.9174 3.92486 13.8338 3.94751 13.7589 3.99505L7.5 7.96703L1.24112 3.99505C1.16621 3.94751 1.0826 3.92486 1 3.92494V3ZM1 4.90797V12H14V4.90797L7.74112 8.87995C7.59394 8.97335 7.40606 8.97335 7.25888 8.87995L1 4.90797Z"
                 fill="currentColor"
                 fill-rule="evenodd"
                 clip-rule="evenodd"

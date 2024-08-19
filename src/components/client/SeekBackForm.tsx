@@ -114,7 +114,22 @@ export default function LoginForm() {
             </p>
             <Form.Field className="grid mb-[10px]" name="email">
               <div className="flex items-baseline justify-between">
-                <Form.Label className="text-[15px] font-medium leading-[35px] text-white">
+                <Form.Label className="text-[15px] font-medium leading-[35px] text-white flex gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>{" "}
                   Email
                 </Form.Label>
                 <Form.Message
@@ -140,7 +155,22 @@ export default function LoginForm() {
             </Form.Field>
             <Form.Field className="grid mb-[10px]" name="password">
               <div className="flex items-baseline justify-between">
-                <Form.Label className="text-[15px] font-medium leading-[35px] text-white">
+                <Form.Label className="text-[15px] font-medium leading-[35px] text-white flex gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-key-round"
+                  >
+                    <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" />
+                    <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
+                  </svg>
                   NewPassword
                 </Form.Label>
                 <Form.Message
@@ -206,7 +236,22 @@ export default function LoginForm() {
 
             <Form.Field className="grid mb-[10px]" name="code">
               <div className="flex items-baseline justify-between">
-                <Form.Label className="text-[15px] font-medium leading-[35px] text-white">
+                <Form.Label className="text-[15px] font-medium leading-[35px] text-white flex gap-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-mail"
+                  >
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                  </svg>
                   code
                 </Form.Label>
                 <Form.Message
