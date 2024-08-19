@@ -24,7 +24,7 @@ const EditUserInfoButton = (props: any) => {
   const { userInfoRfetch, userInfo } = props;
   const updateUserDataMutation = useMutation({
     mutationFn: (v: UserInfoForm) =>
-      $axios.post("/update", {
+      $axios.post("/user/update", {
         name: v.name || userInfo.name,
         password: v.password || userInfo.password,
         phoneNumber: v.phoneNumber || userInfo.phoneNumber,

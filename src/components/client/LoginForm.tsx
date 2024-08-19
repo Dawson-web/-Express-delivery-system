@@ -24,7 +24,7 @@ export default function LoginForm() {
   const loginMutation = useMutation({
     mutationFn: (v: LoginForm) =>
       $axios.post(
-        "/token",
+        "/user/token",
         {
           email: v.email,
           username: v.username,

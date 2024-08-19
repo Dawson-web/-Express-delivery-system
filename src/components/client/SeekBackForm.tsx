@@ -28,7 +28,7 @@ export default function LoginForm() {
 
   const getEmailCodeMutation = useMutation({
     mutationFn: (v: SeekBackForm) =>
-      $axios.post("/verifyCode", {
+      $axios.post("/user/verifyCode", {
         email: v.email,
       }),
     onSuccess: () => {
@@ -48,7 +48,7 @@ export default function LoginForm() {
   const seekBackMutation = useMutation({
     mutationFn: (v: SeekBackForm) =>
       $axios.post(
-        "/forgetPassword",
+        "/user/forgetPassword",
         {
           email: v.email,
           password: v.password,

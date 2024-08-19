@@ -11,7 +11,7 @@ import {
 import clsx from "clsx";
 import { useState } from "react";
 export default function Page() {
-  const [component, setComponent] = useState<string>("ArticleUpload");
+  const [component, setComponent] = useState<string>("AddCompany");
 
   return (
     <main className=" flex flex-col items-center justify-center gap-4  w-[85vw] min-w-[360px]">
@@ -19,20 +19,20 @@ export default function Page() {
       <Menubar className="w-full shadow-md">
         <MenubarMenu>
           <MenubarTrigger
-            onClick={() => setComponent("ArticleUpload")}
+            onClick={() => setComponent("AddCompany")}
             className={clsx({
-              "border-b-2 border-blue-600": component == "ArticleUpload",
+              "border-b-2 border-blue-600": component == "AddCompany",
             })}
           >
-            发布文章
+            新增物流公司
           </MenubarTrigger>
           <MenubarTrigger
-            onClick={() => setComponent("ArticleDelete")}
+            onClick={() => setComponent("AddStation")}
             className={clsx({
-              "border-b-2 border-blue-600": component == "ArticleDelete",
+              "border-b-2 border-blue-600": component == "AddStation",
             })}
           >
-            删除文章
+            新增驿站
           </MenubarTrigger>
         </MenubarMenu>
       </Menubar>

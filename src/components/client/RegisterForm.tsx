@@ -31,7 +31,7 @@ export default function RegisterForm() {
 
   const getEmailCodeMutation = useMutation({
     mutationFn: (v: RegisterForm) =>
-      $axios.post("/verifyCode", {
+      $axios.post("/user/verifyCode", {
         email: v.email,
       }),
     onSuccess: () => {
@@ -51,7 +51,7 @@ export default function RegisterForm() {
   const registerMutation = useMutation({
     mutationFn: (v: RegisterForm) =>
       $axios.post(
-        "/register",
+        "/user/register",
         {
           email: v.email,
           password: v.password,

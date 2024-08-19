@@ -39,7 +39,7 @@ export default function ProfileCard() {
   const { isSuccess, data, refetch } = useQuery({
     queryKey: ["avatar"],
     queryFn: () =>
-      $axios.get("/avatar", {
+      $axios.get("/user/avatar", {
         params: {
           uid: getValidUid(),
         },
@@ -47,7 +47,7 @@ export default function ProfileCard() {
   });
   const userInfo = useQuery({
     queryKey: ["userInfo"],
-    queryFn: () => $axios.get("/myInfo"),
+    queryFn: () => $axios.get("/user/myInfo"),
   });
 
   const userInfoRfetch = userInfo.refetch;
@@ -56,7 +56,7 @@ export default function ProfileCard() {
 
   const getAvatarMutation = useMutation({
     mutationFn: (formData: FormData) =>
-      $axios.post("/avatar", formData, {
+      $axios.post("/user/avatar", formData, {
         params: {
           uid: getValidUid(),
         },
