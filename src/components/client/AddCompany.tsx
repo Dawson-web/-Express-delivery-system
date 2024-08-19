@@ -54,7 +54,24 @@ export default function AddCompany() {
     >
       <Form.Field className="grid mb-[10px]" name="name">
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[15px] font-medium leading-[35px] ">
+          <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-package"
+            >
+              <path d="m7.5 4.27 9 5.15" />
+              <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+              <path d="m3.3 7 8.7 5 8.7-5" />
+              <path d="M12 22V12" />
+            </svg>{" "}
             物流名：
           </Form.Label>
           <Form.Message
@@ -74,7 +91,23 @@ export default function AddCompany() {
       </Form.Field>
       <Form.Field className="grid mb-[10px]" name="address">
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[15px] font-medium leading-[35px] ">
+          <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-map-pinned"
+            >
+              <path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0" />
+              <circle cx="12" cy="8" r="2" />
+              <path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712" />
+            </svg>{" "}
             公司地址：
           </Form.Label>
           <Form.Message
@@ -94,7 +127,22 @@ export default function AddCompany() {
       </Form.Field>
       <Form.Field className="grid mb-[10px]" name="contactPhone">
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[15px] font-medium leading-[35px] ">
+          <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-headset"
+            >
+              <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" />
+              <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+            </svg>{" "}
             联系电话
           </Form.Label>
           <Form.Message
@@ -114,7 +162,22 @@ export default function AddCompany() {
       </Form.Field>
       <Form.Field className="grid mb-[10px]" name="website">
         <div className="flex items-baseline justify-between">
-          <Form.Label className="text-[15px] font-medium leading-[35px] ">
+          <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-link"
+            >
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+            </svg>
             网址
           </Form.Label>
           <Form.Message

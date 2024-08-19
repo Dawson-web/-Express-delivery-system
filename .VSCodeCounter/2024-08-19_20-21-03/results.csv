@@ -1,11 +1,11 @@
-"filename", "language", "JavaScript", "JSON", "JSON with Comments", "TypeScript", "Markdown", "XML", "TypeScript JSX", "CSS", "comment", "blank", "total"
+"filename", "language", "JSON", "JavaScript", "JSON with Comments", "TypeScript", "Markdown", "XML", "TypeScript JSX", "CSS", "comment", "blank", "total"
 "f:\毕设-快递系统\.eslintrc.json", "JSON with Comments", 0, 0, 3, 0, 0, 0, 0, 0, 0, 1, 4
 "f:\毕设-快递系统\README.md", "Markdown", 0, 0, 0, 0, 23, 0, 0, 0, 0, 14, 37
-"f:\毕设-快递系统\components.json", "JSON", 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 17
-"f:\毕设-快递系统\next.config.mjs", "JavaScript", 2, 0, 0, 0, 0, 0, 0, 0, 1, 2, 5
-"f:\毕设-快递系统\package-lock.json", "JSON", 0, 13893, 0, 0, 0, 0, 0, 0, 0, 1, 13894
-"f:\毕设-快递系统\package.json", "JSON", 0, 61, 0, 0, 0, 0, 0, 0, 0, 1, 62
-"f:\毕设-快递系统\postcss.config.mjs", "JavaScript", 6, 0, 0, 0, 0, 0, 0, 0, 1, 2, 9
+"f:\毕设-快递系统\components.json", "JSON", 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17
+"f:\毕设-快递系统\next.config.mjs", "JavaScript", 0, 2, 0, 0, 0, 0, 0, 0, 1, 2, 5
+"f:\毕设-快递系统\package-lock.json", "JSON", 13893, 0, 0, 0, 0, 0, 0, 0, 0, 1, 13894
+"f:\毕设-快递系统\package.json", "JSON", 61, 0, 0, 0, 0, 0, 0, 0, 0, 1, 62
+"f:\毕设-快递系统\postcss.config.mjs", "JavaScript", 0, 6, 0, 0, 0, 0, 0, 0, 1, 2, 9
 "f:\毕设-快递系统\public\next.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
 "f:\毕设-快递系统\public\vercel.svg", "XML", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1
 "f:\毕设-快递系统\src\app\api\index.ts", "TypeScript", 0, 0, 0, 37, 0, 0, 0, 0, 0, 5, 42
@@ -27,8 +27,8 @@
 "f:\毕设-快递系统\src\app\provider\ReactQueryProvider.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 9, 0, 0, 5, 14
 "f:\毕设-快递系统\src\app\register\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 9, 0, 0, 2, 11
 "f:\毕设-快递系统\src\app\seekback\page.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 9, 0, 0, 2, 11
-"f:\毕设-快递系统\src\components\client\AddCompany.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 141, 0, 0, 2, 143
-"f:\毕设-快递系统\src\components\client\AddStation.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 141, 0, 0, 3, 144
+"f:\毕设-快递系统\src\components\client\AddCompany.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 204, 0, 0, 2, 206
+"f:\毕设-快递系统\src\components\client\AddStation.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 205, 0, 0, 3, 208
 "f:\毕设-快递系统\src\components\client\AfterSale.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 30, 0, 0, 4, 34
 "f:\毕设-快递系统\src\components\client\AllOrders.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 30, 0, 0, 4, 34
 "f:\毕设-快递系统\src\components\client\ArticleDelete.tsx", "TypeScript JSX", 0, 0, 0, 0, 0, 0, 47, 0, 1, 1, 49
@@ -67,4 +67,4 @@
 "f:\毕设-快递系统\src\utils\jd.ts", "TypeScript", 0, 0, 0, 18, 0, 0, 0, 0, 0, 2, 20
 "f:\毕设-快递系统\tailwind.config.ts", "TypeScript", 0, 0, 0, 88, 0, 0, 0, 0, 1, 4, 93
 "f:\毕设-快递系统\tsconfig.json", "JSON with Comments", 0, 0, 26, 0, 0, 0, 0, 0, 0, 1, 27
-"Total", "-", 8, 13971, 29, 225, 23, 2, 3704, 141, 32, 320, 18455
+"Total", "-", 13971, 8, 29, 225, 23, 2, 3831, 141, 32, 320, 18582

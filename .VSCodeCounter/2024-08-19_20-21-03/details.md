@@ -1,10 +1,10 @@
 # Details
 
-Date : 2024-08-19 19:53:53
+Date : 2024-08-19 20:21:03
 
 Directory f:\\毕设-快递系统
 
-Total : 68 files,  17847 codes, 32 comments, 320 blanks, all 18199 lines
+Total : 68 files,  18230 codes, 32 comments, 320 blanks, all 18582 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -39,25 +39,25 @@ Total : 68 files,  17847 codes, 32 comments, 320 blanks, all 18199 lines
 | [src/app/provider/ReactQueryProvider.tsx](/src/app/provider/ReactQueryProvider.tsx) | TypeScript JSX | 9 | 0 | 5 | 14 |
 | [src/app/register/page.tsx](/src/app/register/page.tsx) | TypeScript JSX | 9 | 0 | 2 | 11 |
 | [src/app/seekback/page.tsx](/src/app/seekback/page.tsx) | TypeScript JSX | 9 | 0 | 2 | 11 |
-| [src/components/client/AddCompany.tsx](/src/components/client/AddCompany.tsx) | TypeScript JSX | 141 | 0 | 2 | 143 |
-| [src/components/client/AddStation.tsx](/src/components/client/AddStation.tsx) | TypeScript JSX | 141 | 0 | 3 | 144 |
+| [src/components/client/AddCompany.tsx](/src/components/client/AddCompany.tsx) | TypeScript JSX | 204 | 0 | 2 | 206 |
+| [src/components/client/AddStation.tsx](/src/components/client/AddStation.tsx) | TypeScript JSX | 205 | 0 | 3 | 208 |
 | [src/components/client/AfterSale.tsx](/src/components/client/AfterSale.tsx) | TypeScript JSX | 30 | 0 | 4 | 34 |
 | [src/components/client/AllOrders.tsx](/src/components/client/AllOrders.tsx) | TypeScript JSX | 30 | 0 | 4 | 34 |
 | [src/components/client/ArticleDelete.tsx](/src/components/client/ArticleDelete.tsx) | TypeScript JSX | 47 | 1 | 1 | 49 |
 | [src/components/client/ControlButton.tsx](/src/components/client/ControlButton.tsx) | TypeScript JSX | 67 | 0 | 4 | 71 |
-| [src/components/client/EditUserInfoButton.tsx](/src/components/client/EditUserInfoButton.tsx) | TypeScript JSX | 171 | 0 | 6 | 177 |
+| [src/components/client/EditUserInfoButton.tsx](/src/components/client/EditUserInfoButton.tsx) | TypeScript JSX | 216 | 0 | 6 | 222 |
 | [src/components/client/FriendLink.tsx](/src/components/client/FriendLink.tsx) | TypeScript JSX | 54 | 0 | 3 | 57 |
 | [src/components/client/FriendLink/LinkCard.tsx](/src/components/client/FriendLink/LinkCard.tsx) | TypeScript JSX | 40 | 0 | 5 | 45 |
-| [src/components/client/IndexCard.tsx](/src/components/client/IndexCard.tsx) | TypeScript JSX | 79 | 0 | 2 | 81 |
-| [src/components/client/LoginForm.tsx](/src/components/client/LoginForm.tsx) | TypeScript JSX | 139 | 1 | 2 | 142 |
+| [src/components/client/IndexCard.tsx](/src/components/client/IndexCard.tsx) | TypeScript JSX | 94 | 0 | 2 | 96 |
+| [src/components/client/LoginForm.tsx](/src/components/client/LoginForm.tsx) | TypeScript JSX | 176 | 1 | 2 | 179 |
 | [src/components/client/Menu/DarkMode.tsx](/src/components/client/Menu/DarkMode.tsx) | TypeScript JSX | 65 | 0 | 3 | 68 |
 | [src/components/client/Menu/NavOpen.tsx](/src/components/client/Menu/NavOpen.tsx) | TypeScript JSX | 55 | 0 | 3 | 58 |
 | [src/components/client/OperationPanel.tsx](/src/components/client/OperationPanel.tsx) | TypeScript JSX | 88 | 0 | 2 | 90 |
-| [src/components/client/ProfileCard.tsx](/src/components/client/ProfileCard.tsx) | TypeScript JSX | 206 | 10 | 8 | 224 |
-| [src/components/client/RegisterForm.tsx](/src/components/client/RegisterForm.tsx) | TypeScript JSX | 299 | 3 | 9 | 311 |
+| [src/components/client/ProfileCard.tsx](/src/components/client/ProfileCard.tsx) | TypeScript JSX | 208 | 10 | 8 | 226 |
+| [src/components/client/RegisterForm.tsx](/src/components/client/RegisterForm.tsx) | TypeScript JSX | 359 | 3 | 9 | 371 |
 | [src/components/client/RenderComponent.tsx](/src/components/client/RenderComponent.tsx) | TypeScript JSX | 21 | 0 | 2 | 23 |
-| [src/components/client/SeekBackForm.tsx](/src/components/client/SeekBackForm.tsx) | TypeScript JSX | 272 | 2 | 8 | 282 |
-| [src/components/client/SendOrders.tsx](/src/components/client/SendOrders.tsx) | TypeScript JSX | 232 | 6 | 8 | 246 |
+| [src/components/client/SeekBackForm.tsx](/src/components/client/SeekBackForm.tsx) | TypeScript JSX | 317 | 2 | 8 | 327 |
+| [src/components/client/SendOrders.tsx](/src/components/client/SendOrders.tsx) | TypeScript JSX | 284 | 6 | 8 | 298 |
 | [src/components/client/ToMarkdown.tsx](/src/components/client/ToMarkdown.tsx) | TypeScript JSX | 20 | 0 | 2 | 22 |
 | [src/components/client/menu.tsx](/src/components/client/menu.tsx) | TypeScript JSX | 174 | 0 | 5 | 179 |
 | [src/components/client/scroller.module.css](/src/components/client/scroller.module.css) | CSS | 11 | 0 | 0 | 11 |

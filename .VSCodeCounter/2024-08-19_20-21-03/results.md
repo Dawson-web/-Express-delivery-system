@@ -1,10 +1,10 @@
 # Summary
 
-Date : 2024-08-19 19:53:53
+Date : 2024-08-19 20:21:03
 
 Directory f:\\毕设-快递系统
 
-Total : 68 files,  17847 codes, 32 comments, 320 blanks, all 18199 lines
+Total : 68 files,  18230 codes, 32 comments, 320 blanks, all 18582 lines
 
 Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -12,7 +12,7 @@ Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-
 | language | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
 | JSON | 3 | 13,971 | 0 | 2 | 13,973 |
-| TypeScript JSX | 45 | 3,448 | 29 | 236 | 3,713 |
+| TypeScript JSX | 45 | 3,831 | 29 | 236 | 4,096 |
 | TypeScript | 9 | 225 | 1 | 29 | 255 |
 | CSS | 4 | 141 | 0 | 33 | 174 |
 | JSON with Comments | 2 | 29 | 0 | 2 | 31 |
@@ -23,10 +23,10 @@ Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-
 ## Directories
 | path | files | code | comment | blank | total |
 | :--- | ---: | ---: | ---: | ---: | ---: |
-| . | 68 | 17,847 | 32 | 320 | 18,199 |
+| . | 68 | 18,230 | 32 | 320 | 18,582 |
 | . (Files) | 9 | 14,119 | 3 | 26 | 14,148 |
 | public | 2 | 2 | 0 | 0 | 2 |
-| src | 57 | 3,726 | 29 | 294 | 4,049 |
+| src | 57 | 4,109 | 29 | 294 | 4,432 |
 | src\\app | 19 | 401 | 6 | 82 | 489 |
 | src\\app (Files) | 4 | 119 | 1 | 32 | 152 |
 | src\\app\\api | 3 | 75 | 0 | 11 | 86 |
@@ -42,9 +42,9 @@ Summary / [Details](details.md) / [Diff Summary](diff.md) / [Diff Details](diff-
 | src\\app\\provider | 1 | 9 | 0 | 5 | 14 |
 | src\\app\\register | 1 | 9 | 0 | 2 | 11 |
 | src\\app\\seekback | 1 | 9 | 0 | 2 | 11 |
-| src\\components | 34 | 3,276 | 23 | 202 | 3,501 |
-| src\\components\\client | 22 | 2,382 | 23 | 86 | 2,491 |
-| src\\components\\client (Files) | 19 | 2,222 | 23 | 75 | 2,320 |
+| src\\components | 34 | 3,659 | 23 | 202 | 3,884 |
+| src\\components\\client | 22 | 2,765 | 23 | 86 | 2,874 |
+| src\\components\\client (Files) | 19 | 2,605 | 23 | 75 | 2,703 |
 | src\\components\\client\\FriendLink | 1 | 40 | 0 | 5 | 45 |
 | src\\components\\client\\Menu | 2 | 120 | 0 | 6 | 126 |
 | src\\components\\motion | 2 | 118 | 0 | 23 | 141 |
