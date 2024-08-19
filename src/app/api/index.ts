@@ -19,23 +19,23 @@ $axios.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// $axios.interceptors.response.use(
-//   (response) => {
-//     const code = response.status; // 注意这里使用 response.status 获取 HTTP 状态码
-//     switch (true) {
-//       case code >= 200 && code < 300: {
-//         if (response.data.msg != "ok") {
-//           return Promise.reject(new Error(`${response.data.msg}`));
-//         }
-//         return response;
-//       }
-//       case code >= 400 && code < 500:
-//         return Promise.reject(new Error(`客户端错误: ${code}`));
-//       case code >= 500 && code < 600:
-//         return Promise.reject(new Error(`服务器错误: ${code}`));
-//       default:
-//         return Promise.reject(new Error(`未知错误: ${code}`));
-//     }
-//   },
-//   (error) => Promise.reject(error)
-// );
+$axios.interceptors.response.use(
+  (response) => {
+    const code = response.status; // 注意这里使用 response.status 获取 HTTP 状态码
+    switch (true) {
+      case code >= 200 && code < 300: {
+        if (response.data.msg != "ok") {
+          return Promise.reject(new Error(`${response.data.msg}`));
+        }
+        return response;
+      }
+      case code >= 400 && code < 500:
+        return Promise.reject(new Error(`客户端错误: ${code}`));
+      case code >= 500 && code < 600:
+        return Promise.reject(new Error(`服务器错误: ${code}`));
+      default:
+        return Promise.reject(new Error(`未知错误: ${code}`));
+    }
+  },
+  (error) => Promise.reject(error)
+);

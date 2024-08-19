@@ -18,8 +18,23 @@ import { notifications } from "@mantine/notifications";
 import { getValidUid, setToken } from "@/app/api/token";
 import { useEffect, useState } from "react";
 import { Upload } from "lucide-react";
+import EditUserInfoButton from "./EditUserInfoButton";
+import { Api, ApiOk } from "@/app/api/types";
+
+interface UserData {
+  avatar: string;
+  createTime: string;
+  email: string;
+  id: number;
+  lastLoginTime: null;
+  name: string;
+  password: string;
+  phoneNumber: null;
+  role: number;
+  username: string;
+}
+
 export default function ProfileCard() {
-  const [avatar, setAvatar] = useState();
   function getAvatar(v: string) {}
   const { isSuccess, data, refetch } = useQuery({
     queryKey: ["avatar"],
@@ -30,6 +45,14 @@ export default function ProfileCard() {
         },
       }),
   });
+  const userInfo = useQuery({
+    queryKey: ["userInfo"],
+    queryFn: () => $axios.get("/myInfo"),
+  });
+
+  const userInfoRfetch = userInfo.refetch;
+  // const userData: UserData = useState(userInfo.data?.data.data;
+  // console.log(userData);
 
   const getAvatarMutation = useMutation({
     mutationFn: (formData: FormData) =>
@@ -113,7 +136,45 @@ export default function ProfileCard() {
               <circle cx="12" cy="10" r="4" />
               <circle cx="12" cy="12" r="10" />
             </svg>
-            用户：XXXXXXX
+            用户：{userInfo.data?.data.data.name}
+          </p>
+          <p className=" flex gap-2 items-center w-[260px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className=" text-gray-600"
+            >
+              <path d="M18 20a6 6 0 0 0-12 0" />
+              <circle cx="12" cy="10" r="4" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+            ID：{userInfo.data?.data.data.id}
+          </p>
+          <p className=" flex gap-2 items-center w-[260px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className=" text-gray-600"
+            >
+              <path d="M18 20a6 6 0 0 0-12 0" />
+              <circle cx="12" cy="10" r="4" />
+              <circle cx="12" cy="12" r="10" />
+            </svg>
+            账号：{userInfo.data?.data.data.username}
           </p>
           <p className=" flex gap-2 items-center w-[260px]">
             <svg
@@ -130,7 +191,7 @@ export default function ProfileCard() {
             >
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
-            电话：XXXXXXXXXX
+            电话：{userInfo.data?.data.data.phoneNumber || "暂无"}
           </p>
 
           <p className="flex gap-2 items-center w-[260px]">
@@ -153,6 +214,10 @@ export default function ProfileCard() {
           </p>
         </CardContent>
       </Card>
+      <EditUserInfoButton
+        userInfoRfetch={userInfoRfetch}
+        userInfo={userInfo.data?.data.data}
+      />
     </main>
   );
 }

@@ -7,7 +7,6 @@ export default function page(props: any) {
   return (
     <div>
       <ProfileCard />
-      <EditUserInfoButton />
     </div>
   );
 }
