@@ -94,10 +94,10 @@ export default function ProfileCard() {
   }
 
   return (
-    <main className=" gap-4  shadow-xl sm:mt-[8px] mt-[40px]">
+    <main className=" gap-4  shadow-xl sm:mt-[8px] mt-[40px]  mx-auto ">
       <Card className="cursor-default ">
         <CardHeader>
-          <CardTitle className="flex flex-row items-center sm:gap-8 gap-2 text-zinc-700 flex-wrap">
+          <CardTitle className="flex flex-row items-center sm:gap-8 gap-2 text-zinc-700 flex-wrap justify-between">
             {/* <Image
               src="http://47.109.106.254:9000/avatar/1825046541603442689.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=minioadmin%2F20240818%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240818T144721Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b0deb7cc0f77333bc724460b36b561f957de6d44b7851b3757e9cbf7f8ddeb"
               alt="Dawson's avatar"
@@ -113,10 +113,14 @@ export default function ProfileCard() {
                 UploadAvatar();
               }}
             />
+            <EditUserInfoButton
+              userInfoRfetch={userInfoRfetch}
+              userInfo={userInfo.data?.data.data}
+            />
           </CardTitle>
         </CardHeader>
         <CardContent
-          className="flex gap-x-10 gap-y-2 text-zinc-500  text-sm flex-wrap 
+          className="grid gap-x-10 gap-y-2 text-zinc-500  text-sm grid-cols-2
 "
         >
           <p className=" flex gap-2 items-center w-[260px]">
@@ -149,7 +153,6 @@ export default function ProfileCard() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-id-card"
             >
               <path d="M16 10h2" />
               <path d="M16 14h2" />
@@ -170,7 +173,6 @@ export default function ProfileCard() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-square-user-round"
             >
               <path d="M18 21a6 6 0 0 0-12 0" />
               <circle cx="12" cy="11" r="4" />
@@ -216,10 +218,6 @@ export default function ProfileCard() {
           </p>
         </CardContent>
       </Card>
-      <EditUserInfoButton
-        userInfoRfetch={userInfoRfetch}
-        userInfo={userInfo.data?.data.data}
-      />
     </main>
   );
 }

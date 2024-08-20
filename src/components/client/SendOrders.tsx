@@ -17,17 +17,19 @@ export default function SendOrders(props: any) {
     queryKey: ["company"],
     queryFn: () => $axios.get("/company/list"),
   });
-  const stationList = useQuery({
-    queryKey: ["station"],
-    queryFn: () => $axios.get("/station/list"),
-  });
+  // const stationList = useQuery({
+  //   queryKey: ["station"],
+  //   queryFn: () => $axios.get("/station/list"),
+  // });
   // const itemList = useQuery({
   //   queryKey: ["item"],
   //   queryFn: () => $axios.get("/item/list"),
   // });
-  console.log(companyList.data?.data.data);
-  console.log(stationList.data?.data.data);
-  // console.log(itemList.data?.data.data);
+
+  // const orderList = useQuery({
+  //   queryKey: ["orderList"],
+  //   queryFn: () => $axios.get("/station/orderList"),
+  // });
 
   const postItemMutation = useMutation({
     mutationFn: (v: any) => $axios.post("/item/create", v),
@@ -57,11 +59,9 @@ export default function SendOrders(props: any) {
               name: data.name,
               currentLocation: data.currentLocation,
             };
-            const blob = new Blob([JSON.stringify(item)], {
-              type: "application/json",
-            });
-            formData.append("item", blob);
-            formData.append("file", data.file);
+
+            formData.set("item", JSON.stringify(item));
+            formData.set("file", data.file);
 
             postItemMutation.mutate(formData);
 
@@ -101,7 +101,6 @@ export default function SendOrders(props: any) {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-image-up"
                 >
                   <path d="M10.3 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10l-3.1-3.1a2 2 0 0 0-2.814.014L6 21" />
                   <path d="m14 19.5 3-3 3 3" />
@@ -118,11 +117,7 @@ export default function SendOrders(props: any) {
               </Form.Message>
             </div>
             <Form.Control asChild>
-              <input
-                className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none  shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
-                type="file"
-                required
-              />
+              <input className="" type="file" required />
             </Form.Control>
           </Form.Field>
           <Form.Field className="grid mb-[10px]" name="name">
@@ -138,7 +133,6 @@ export default function SendOrders(props: any) {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-notebook-pen"
                 >
                   <path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" />
                   <path d="M2 6h4" />
@@ -176,7 +170,6 @@ export default function SendOrders(props: any) {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-map-pinned"
                 >
                   <path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0" />
                   <circle cx="12" cy="8" r="2" />

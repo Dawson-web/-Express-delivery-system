@@ -21,7 +21,7 @@ export default function DashboardLayout({
 
       <section
         className={clsx(
-          "  grow w-[100vw] sm:w-[70vw]  flex flex-col items-center  bg-gray-200 dark:bg-gray-900 min-h-screen"
+          "  grow w-[clac(100vw-1rem)] sm:w-[70vw]  p-[1rem] flex flex-col items-center  bg-gray-200 dark:bg-gray-900 min-h-screen"
         )}
       >
         {children}

@@ -82,7 +82,7 @@ export default function RegisterForm() {
     <div>
       {pace === 0 ? (
         <Form.Root
-          className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-[2px] "
+          className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-t-4 border-blue-600  "
           onSubmit={(event) => {
             const data = Object.fromEntries(new FormData(event.currentTarget));
             // prevent default form submission
@@ -129,7 +129,6 @@ export default function RegisterForm() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-user-round"
                 >
                   <circle cx="12" cy="8" r="5" />
                   <path d="M20 21a8 8 0 0 0-16 0" />
@@ -164,7 +163,6 @@ export default function RegisterForm() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-mail"
                 >
                   <rect width="20" height="16" x="2" y="4" rx="2" />
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -205,7 +203,6 @@ export default function RegisterForm() {
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-key-round"
                 >
                   <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z" />
                   <circle cx="16.5" cy="7.5" r=".5" fill="currentColor" />
@@ -242,7 +239,7 @@ export default function RegisterForm() {
       {pace === 1 ? (
         <div>
           <Form.Root
-            className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-[2px] "
+            className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-t-2 border-blue-600  "
             onSubmit={(event) => {
               const data = Object.fromEntries(
                 new FormData(event.currentTarget)
@@ -288,7 +285,6 @@ export default function RegisterForm() {
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="lucide lucide-mail"
                   >
                     <rect width="20" height="16" x="2" y="4" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -326,7 +322,7 @@ export default function RegisterForm() {
       {pace === 2 ? (
         <div>
           <Form.Root
-            className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-[2px] "
+            className="w-[360px] bg-gray-200/30 backdrop-blur p-6 rounded-md border-t-2 border-blue-600  "
             onSubmit={(event) => {
               router.push("/login");
               event.preventDefault();

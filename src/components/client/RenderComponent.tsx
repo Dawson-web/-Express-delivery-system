@@ -5,6 +5,7 @@ import SendOrders from "@/components/client/SendOrders";
 import AfterSale from "@/components/client/AfterSale";
 import AddCompany from "./AddCompany";
 import AddStation from "./AddStation";
+import { UserRole } from "./UserRole";
 export const RenderComponent = (props: any) => {
   const { component } = props; // Assuming the component prop is a string that represents the component to render
   switch (component) {
@@ -18,5 +19,7 @@ export const RenderComponent = (props: any) => {
       return <AddCompany />;
     case "AddStation":
       return <AddStation />;
+    case "UserRole":
+      return <UserRole />;
   }
 };

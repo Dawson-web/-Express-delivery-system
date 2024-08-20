@@ -65,7 +65,6 @@ export default function AddStation() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-id-card"
             >
               <path d="M16 10h2" />
               <path d="M16 14h2" />
@@ -103,7 +102,6 @@ export default function AddStation() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-house"
             >
               <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
               <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -138,7 +136,6 @@ export default function AddStation() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-map-pinned"
             >
               <path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0" />
               <circle cx="12" cy="8" r="2" />
@@ -174,7 +171,6 @@ export default function AddStation() {
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-clock"
             >
               <circle cx="12" cy="12" r="10" />
               <polyline points="12 6 12 12 16 14" />

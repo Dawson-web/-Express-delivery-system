@@ -24,7 +24,7 @@ $axios.interceptors.response.use(
     const code = response.status; // 注意这里使用 response.status 获取 HTTP 状态码
     switch (true) {
       case code >= 200 && code < 300: {
-        if (response.data.msg != "ok") {
+        if (response.data.code != 200 || response.data.msg != "ok") {
           return Promise.reject(new Error(`${response.data.msg}`));
         }
         return response;
