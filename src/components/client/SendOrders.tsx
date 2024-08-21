@@ -12,7 +12,7 @@ import { Select } from "@mantine/core";
 export default function SendOrders(props: any) {
   const [status, setStatus] = React.useState<
     "add" | "fill" | "select" | "sure"
-  >("fill");
+  >("add");
 
   let [orderForm, setOrderForm] = React.useState({});
 
@@ -37,6 +37,7 @@ export default function SendOrders(props: any) {
   let [itemId, setItemId] = React.useState("");
   let [stationId, setStationId] = React.useState("");
   let [companyId, setCompanyId] = React.useState("");
+  let [method, setMethod] = React.useState("");
 
   for (let i = 0; i < itemList.data?.data.data.length; i++) {
     items.push({
@@ -72,6 +73,21 @@ export default function SendOrders(props: any) {
       });
     },
   });
+
+  const shippingMethod = [
+    {
+      label: "微信支付",
+      value: "0",
+    },
+    {
+      label: "支付宝",
+      value: "1",
+    },
+    {
+      label: "货到付款",
+      value: "2",
+    },
+  ];
 
   const postOrderMutation = useMutation({
     mutationFn: (v: any) => $axios.post("/order/create", v),
@@ -429,7 +445,15 @@ export default function SendOrders(props: any) {
               judge();
             }}
           />
-
+          <Select
+            label="支付方式"
+            placeholder="Pick value"
+            data={shippingMethod}
+            onChange={(_value, option) => {
+              setMethod(option.value);
+              judge();
+            }}
+          />
           <button
             onClick={() => {
               let form = {
@@ -438,7 +462,7 @@ export default function SendOrders(props: any) {
                 companyId: companyId,
                 itemId: itemId,
                 isReturn: "0",
-                shippingMethod: "web",
+                shippingMethod: Number(method),
               };
 
               console.log(form);
