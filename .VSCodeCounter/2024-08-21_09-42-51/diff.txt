@@ -1,0 +1,44 @@
+Date : 2024-08-21 09:42:51
+Directory : f:\毕设-快递系统
+Total : 13 files,  48 codes, 7 comments, 8 blanks, all 63 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |         13 |         48 |          7 |          8 |         63 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                    | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                       |         13 |         48 |          7 |          8 |         63 |
+| src                                                     |         13 |         48 |          7 |          8 |         63 |
+| src\app                                                 |          2 |         10 |          0 |          0 |         10 |
+| src\app\dashboard                                       |          2 |         10 |          0 |          0 |         10 |
+| src\app\dashboard\control                               |          1 |          8 |          0 |          0 |          8 |
+| src\app\dashboard\links                                 |          1 |          2 |          0 |          0 |          2 |
+| src\components                                          |         11 |         38 |          7 |          8 |         53 |
+| src\components\client                                   |         11 |         38 |          7 |          8 |         53 |
++---------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                | language       | code       | comment    | blank      | total      |
++---------------------------------------------------------+----------------+------------+------------+------------+------------+
+| f:\毕设-快递系统\src\app\dashboard\control\page.tsx           | TypeScript JSX |          8 |          0 |          0 |          8 |
+| f:\毕设-快递系统\src\app\dashboard\links\page.tsx             | TypeScript JSX |          2 |          0 |          0 |          2 |
+| f:\毕设-快递系统\src\components\client\AddCompany.tsx         | TypeScript JSX |         -4 |          0 |          0 |         -4 |
+| f:\毕设-快递系统\src\components\client\AddStation.tsx         | TypeScript JSX |         -4 |          0 |          0 |         -4 |
+| f:\毕设-快递系统\src\components\client\EditUserInfoButton.tsx | TypeScript JSX |         -4 |          0 |          0 |         -4 |
+| f:\毕设-快递系统\src\components\client\IndexCard.tsx          | TypeScript JSX |         -1 |          0 |          0 |         -1 |
+| f:\毕设-快递系统\src\components\client\LoginForm.tsx          | TypeScript JSX |         -2 |          0 |          0 |         -2 |
+| f:\毕设-快递系统\src\components\client\ProfileCard.tsx        | TypeScript JSX |         -2 |          0 |          0 |         -2 |
+| f:\毕设-快递系统\src\components\client\RegisterForm.tsx       | TypeScript JSX |         -4 |          0 |          0 |         -4 |
+| f:\毕设-快递系统\src\components\client\RenderComponent.tsx    | TypeScript JSX |          3 |          0 |          0 |          3 |
+| f:\毕设-快递系统\src\components\client\SeekBackForm.tsx       | TypeScript JSX |         -3 |          0 |          0 |         -3 |
+| f:\毕设-快递系统\src\components\client\SendOrders.tsx         | TypeScript JSX |        -16 |          7 |          2 |         -7 |
+| f:\毕设-快递系统\src\components\client\UserRole.tsx           | TypeScript JSX |         75 |          0 |          6 |         81 |
+| Total                                                   |                |         48 |          7 |          8 |         63 |
++---------------------------------------------------------+----------------+------------+------------+------------+------------+

@@ -7,9 +7,14 @@ import {
   notificationError,
   notificationSuccess,
 } from "@/constants/notifications";
+import { Select } from "@mantine/core";
 
 export default function SendOrders(props: any) {
-  const [pace, setPace] = React.useState(0);
+  const [status, setStatus] = React.useState<
+    "add" | "fill" | "select" | "sure"
+  >("fill");
+
+  let [orderForm, setOrderForm] = React.useState({});
 
   const formData = new FormData();
 
@@ -17,28 +22,48 @@ export default function SendOrders(props: any) {
     queryKey: ["company"],
     queryFn: () => $axios.get("/company/list"),
   });
-  // const stationList = useQuery({
-  //   queryKey: ["station"],
-  //   queryFn: () => $axios.get("/station/list"),
-  // });
-  // const itemList = useQuery({
-  //   queryKey: ["item"],
-  //   queryFn: () => $axios.get("/item/list"),
-  // });
+  const stationList = useQuery({
+    queryKey: ["station"],
+    queryFn: () => $axios.get("/station/list"),
+  });
+  const itemList = useQuery({
+    queryKey: ["item"],
+    queryFn: () => $axios.get("/item/list"),
+  });
+  const items = [];
+  const stations = [];
+  const companys = [];
 
-  // const orderList = useQuery({
-  //   queryKey: ["orderList"],
-  //   queryFn: () => $axios.get("/station/orderList"),
-  // });
+  let [itemId, setItemId] = React.useState("");
+  let [stationId, setStationId] = React.useState("");
+  let [companyId, setCompanyId] = React.useState("");
 
+  for (let i = 0; i < itemList.data?.data.data.length; i++) {
+    items.push({
+      label: itemList.data?.data.data[i].name,
+      value: itemList.data?.data.data[i].id,
+    });
+  }
+  for (let i = 0; i < stationList.data?.data.data.length; i++) {
+    stations.push({
+      label: stationList.data?.data.data[i].name,
+      value: stationList.data?.data.data[i].uid,
+    });
+  }
+  for (let i = 0; i < companyList.data?.data.data.length; i++) {
+    companys.push({
+      label: companyList.data?.data.data[i].name,
+      value: companyList.data?.data.data[i].id,
+    });
+  }
   const postItemMutation = useMutation({
     mutationFn: (v: any) => $axios.post("/item/create", v),
     onSuccess: () => {
-      setPace(1);
       notifications.show({
         ...notificationSuccess,
         message: "物品信息已录入",
       });
+      setStatus("fill");
     },
     onError(e) {
       notifications.show({
@@ -48,9 +73,31 @@ export default function SendOrders(props: any) {
     },
   });
 
+  const postOrderMutation = useMutation({
+    mutationFn: (v: any) => $axios.post("/order/create", v),
+    onSuccess: () => {
+      notifications.show({
+        ...notificationSuccess,
+        message: "寄件信息已录入",
+      });
+      setStatus("fill");
+    },
+    onError(e) {
+      notifications.show({
+        ...notificationError,
+        message: e.message,
+      });
+    },
+  });
+  const judge = () => {
+    if (itemId !== "" && stationId !== "" && companyId !== "") {
+      setStatus("sure");
+    }
+  };
+
   return (
     <div className="w-full h-full flex justify-center items-start ">
-      {pace == 0 ? (
+      {status === "add" ? (
         <Form.Root
           className="w-[360px] sm:w-[95%] bg-gray-200 backdrop-blur p-6 rounded-md border-[2px] shadow-2xl "
           onSubmit={(event) => {
@@ -60,7 +107,10 @@ export default function SendOrders(props: any) {
               currentLocation: data.currentLocation,
             };
 
-            formData.set("item", JSON.stringify(item));
+            formData.set(
+              "item",
+              new Blob([JSON.stringify(item)], { type: "application/json" })
+            );
             formData.set("file", data.file);
 
             postItemMutation.mutate(formData);
@@ -193,7 +243,7 @@ export default function SendOrders(props: any) {
           </Form.Field>
           <span
             className="text-xs opacity-50 hover:opacity-75 cursor-pointer"
-            onClick={() => setPace(1)}
+            onClick={() => setStatus("fill")}
           >
             物品信息已收录，直接前往寄件
           </span>
@@ -204,11 +254,16 @@ export default function SendOrders(props: any) {
           </Form.Submit>
         </Form.Root>
       ) : (
+        ""
+      )}
+      {status === "fill" && (
         <Form.Root
           className="w-[360px] sm:w-[95%] bg-gray-200 backdrop-blur p-6 rounded-md border-[2px] shadow-2xl "
           onSubmit={(event) => {
             const data = Object.fromEntries(new FormData(event.currentTarget));
             // prevent default form submission
+            setOrderForm(data);
+            setStatus("select");
             event.preventDefault();
           }}
         >
@@ -232,58 +287,169 @@ export default function SendOrders(props: any) {
             </svg>
             | 寄件详情
           </p>
-          <Form.Field className="grid mb-[10px]" name="account">
+          <Form.Field className="grid mb-[10px]" name="senderPhone">
             <div className="flex items-baseline justify-between">
               <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
-                Email | UserName
+                寄件人电话
               </Form.Label>
               <Form.Message
                 className="text-[13px]  opacity-[0.8]"
                 match="valueMissing"
               >
-                Please enter your account
+                Please enter PhoneNumber
               </Form.Message>
             </div>
             <Form.Control asChild>
               <input
                 className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none  shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
-                type="account"
+                type="senderPhone"
                 required
               />
             </Form.Control>
           </Form.Field>
-          <Form.Field className="grid mb-[10px]" name="password">
+          <Form.Field className="grid mb-[10px]" name="recipientPhone">
             <div className="flex items-baseline justify-between">
               <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
-                Password
+                收件人电话
               </Form.Label>
               <Form.Message
                 className="text-[13px]  opacity-[0.8]"
                 match="valueMissing"
               >
-                Please enter your password
+                Please enter PhoneNumber
               </Form.Message>
             </div>
             <Form.Control asChild>
               <input
                 className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none  shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
-                type="password"
+                type="recipientPhone"
+                required
+              />
+            </Form.Control>
+          </Form.Field>
+          <Form.Field className="grid mb-[10px]" name="senderLocation">
+            <div className="flex items-baseline justify-between">
+              <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+                发货地址
+              </Form.Label>
+              <Form.Message
+                className="text-[13px]  opacity-[0.8]"
+                match="valueMissing"
+              >
+                Please enter senderLocation
+              </Form.Message>
+            </div>
+            <Form.Control asChild>
+              <input
+                className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none  shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
+                type="senderLocation"
+                required
+              />
+            </Form.Control>
+          </Form.Field>
+          <Form.Field className="grid mb-[10px]" name="recipientLocation">
+            <div className="flex items-baseline justify-between">
+              <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+                收件人地址
+              </Form.Label>
+              <Form.Message
+                className="text-[13px]  opacity-[0.8]"
+                match="valueMissing"
+              >
+                Please enter recipientLocation
+              </Form.Message>
+            </div>
+            <Form.Control asChild>
+              <input
+                className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none  shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
+                type="recipientLocation"
+                required
+              />
+            </Form.Control>
+          </Form.Field>
+          <Form.Field className="grid mb-[10px]" name="additionalInfo">
+            <div className="flex items-baseline justify-between">
+              <Form.Label className="text-[15px] font-medium leading-[35px] flex gap-2 ">
+                备注
+              </Form.Label>
+              <Form.Message
+                className="text-[13px]  opacity-[0.8]"
+                match="valueMissing"
+              >
+                Please enter additionalInfo
+              </Form.Message>
+            </div>
+            <Form.Control asChild>
+              <input
+                className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none  shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
+                type="additionalInfo"
                 required
               />
             </Form.Control>
           </Form.Field>
           <span
             className="text-xs opacity-50 hover:opacity-75 cursor-pointer"
-            onClick={() => setPace(0)}
+            onClick={() => setStatus("select")}
           >
             物品信息未收录，前往填写
           </span>
           <Form.Submit asChild>
             <button className="box-border w-full text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none mt-[10px]">
-              确认寄件
+              下一步
             </button>
           </Form.Submit>
         </Form.Root>
+      )}
+      {(status === "select" || status === "sure") && (
+        <div className="w-[360px] sm:w-[95%] bg-gray-200 backdrop-blur p-6 rounded-md border-[2px] shadow-2xl ">
+          <Select
+            label="包裹"
+            placeholder="Pick value"
+            data={items}
+            onChange={(_value, option) => {
+              setItemId(option.value);
+              judge();
+            }}
+          />
+          <Select
+            label="物流公司"
+            placeholder="Pick value"
+            data={companys}
+            onChange={(_value, option) => {
+              setCompanyId(option.value);
+              judge();
+            }}
+          />
+          <Select
+            label="寄件驿站"
+            placeholder="Pick value"
+            data={stations}
+            onChange={(_value, option) => {
+              setStationId(option.value);
+              judge();
+            }}
+          />
+
+          <button
+            onClick={() => {
+              let form = {
+                ...orderForm,
+                stationId: stationId,
+                companyId: companyId,
+                itemId: itemId,
+                isReturn: "0",
+                shippingMethod: "web",
+              };
+
+              console.log(form);
+
+              postOrderMutation.mutate(form);
+            }}
+            className="box-border w-full text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none mt-[10px]"
+          >
+            确认寄件
+          </button>
+        </div>
       )}
     </div>
   );
