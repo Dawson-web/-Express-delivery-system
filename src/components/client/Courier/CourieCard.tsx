@@ -14,7 +14,7 @@ import {
 import * as Form from "@radix-ui/react-form";
 
 import { useState } from "react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { $axios } from "@/app/api";
 import { notifications } from "@mantine/notifications";

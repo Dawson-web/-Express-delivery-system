@@ -1,10 +1,9 @@
 "use client";
 
 import { $axios } from "@/app/api";
-import CourieCard from "@/components/client/CourieCard";
-import FriendLink from "@/components/client/FriendLink";
-import IndexCard from "@/components/client/IndexCard";
-import StationCard from "@/components/client/StationCard";
+import CourieCard from "@/components/client/Courier/CourieCard";
+import IndexCard from "@/components/client/User/IndexCard";
+import StationCard from "@/components/client/Station/StationCard";
 import { useQuery } from "@tanstack/react-query";
 
 export interface Field {

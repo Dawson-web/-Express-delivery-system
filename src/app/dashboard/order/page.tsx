@@ -1,7 +1,7 @@
 "use client";
 
-import OperationPanel from "@/components/client/OperationPanel";
 import { RenderComponent } from "@/components/client/RenderComponent";
+import OperationPanel from "@/components/client/User/OperationPanel";
 import { useState } from "react";
 
 export default function Page() {

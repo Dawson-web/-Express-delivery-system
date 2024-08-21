@@ -92,7 +92,7 @@ export default function LoginForm() {
               event.preventDefault();
             }}
           >
-            <p className="flex justify-center items-center gap-2 w-full m-auto text-center text-[20px] font-bold leading-[35px] text-white mb-4">
+            <p className="flex justify-center items-center gap-2 w-full m-auto text-center text-[20px] font-bold leading-[35px]  mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -114,7 +114,7 @@ export default function LoginForm() {
             </p>
             <Form.Field className="grid mb-[10px]" name="email">
               <div className="flex items-baseline justify-between">
-                <Form.Label className="text-[15px] font-medium leading-[35px] text-white flex gap-2">
+                <Form.Label className="text-[15px] font-medium leading-[35px]  flex gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -132,13 +132,13 @@ export default function LoginForm() {
                   Email
                 </Form.Label>
                 <Form.Message
-                  className="text-[13px] text-white opacity-[0.8]"
+                  className="text-[13px]  opacity-[0.8]"
                   match="valueMissing"
                 >
                   Please enter your email
                 </Form.Message>
                 <Form.Message
-                  className="text-[13px] text-white opacity-[0.8]"
+                  className="text-[13px]  opacity-[0.8]"
                   match="typeMismatch"
                 >
                   Please provide a valid email
@@ -154,7 +154,7 @@ export default function LoginForm() {
             </Form.Field>
             <Form.Field className="grid mb-[10px]" name="password">
               <div className="flex items-baseline justify-between">
-                <Form.Label className="text-[15px] font-medium leading-[35px] text-white flex gap-2">
+                <Form.Label className="text-[15px] font-medium leading-[35px]  flex gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -172,7 +172,7 @@ export default function LoginForm() {
                   NewPassword
                 </Form.Label>
                 <Form.Message
-                  className="text-[13px] text-white opacity-[0.8]"
+                  className="text-[13px]  opacity-[0.8]"
                   match="valueMissing"
                 >
                   Please enter your new password
@@ -211,7 +211,7 @@ export default function LoginForm() {
               event.preventDefault();
             }}
           >
-            <p className="flex justify-center items-center gap-2 w-full m-auto text-center text-[20px] font-bold leading-[35px] text-white mb-4">
+            <p className="flex justify-center items-center gap-2 w-full m-auto text-center text-[20px] font-bold leading-[35px]  mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -234,7 +234,7 @@ export default function LoginForm() {
 
             <Form.Field className="grid mb-[10px]" name="code">
               <div className="flex items-baseline justify-between">
-                <Form.Label className="text-[15px] font-medium leading-[35px] text-white flex gap-2">
+                <Form.Label className="text-[15px] font-medium leading-[35px]  flex gap-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -252,7 +252,7 @@ export default function LoginForm() {
                   code
                 </Form.Label>
                 <Form.Message
-                  className="text-[13px] text-white opacity-[0.8]"
+                  className="text-[13px]  opacity-[0.8]"
                   match="valueMissing"
                 >
                   Please enter your email code
@@ -285,7 +285,7 @@ export default function LoginForm() {
               event.preventDefault();
             }}
           >
-            <p className="flex justify-center items-center gap-2 w-full m-auto text-center text-[20px] font-bold leading-[35px] text-white mb-4">
+            <p className="flex justify-center items-center gap-2 w-full m-auto text-center text-[20px] font-bold leading-[35px]  mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -305,7 +305,7 @@ export default function LoginForm() {
               </svg>
               | 找回密码
             </p>
-            <div className="w-full bg-blue-300/70 p-2 text-white font-bold border-l-8 border-blue-600 ">
+            <div className="w-full bg-blue-300/70 p-2  font-bold border-l-8 border-blue-600 ">
               密码重置成功！
             </div>
             <Form.Submit asChild>

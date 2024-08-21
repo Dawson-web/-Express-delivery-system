@@ -214,7 +214,7 @@ export default function ProfileCard() {
                 clip-rule="evenodd"
               ></path>
             </svg>
-            邮箱：3096567831@qq.com
+            邮箱：XXXXXXXXXX@qq.com
           </p>
         </CardContent>
       </Card>

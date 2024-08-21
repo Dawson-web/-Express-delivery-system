@@ -3,6 +3,7 @@ import Menu from "@/components/client/menu";
 import { Toaster } from "@/components/ui/sonner";
 import clsx from "clsx";
 import { useState } from "react";
+import RoutingGuard from "../provider/RoutingGuard";
 
 export default function DashboardLayout({
   children,
@@ -10,7 +11,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   const [open, setOpen] = useState<boolean>(false);
-
+  RoutingGuard();
   return (
     <main
       className={clsx("flex  sm:flex-row  w-full  ", {

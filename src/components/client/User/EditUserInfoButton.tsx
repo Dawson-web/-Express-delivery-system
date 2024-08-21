@@ -11,7 +11,7 @@ import {
 } from "@/constants/notifications";
 import { notifications } from "@mantine/notifications";
 import { getValidUid } from "@/app/api/token";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 
 interface UserInfoForm {
   name: string;

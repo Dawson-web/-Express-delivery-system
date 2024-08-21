@@ -1,11 +1,11 @@
 "use client";
-import AllOrders from "@/components/client/AllOrders";
-import SendOrders from "@/components/client/SendOrders";
+import SendOrders from "@/components/client/User/SendOrders";
 
-import AfterSale from "@/components/client/AfterSale";
-import AddCompany from "./AddCompany";
-import AddStation from "./AddStation";
-import { UserRole } from "./UserRole";
+import AfterSale from "@/components/client/User/AfterSale";
+import AddCompany from "./Company/AddCompany";
+import AddStation from "./Station/AddStation";
+import { UserRole } from "./Controler/UserRole";
+import AllOrders from "./User/AllOrders";
 export const RenderComponent = (props: any) => {
   const { component } = props; // Assuming the component prop is a string that represents the component to render
   switch (component) {

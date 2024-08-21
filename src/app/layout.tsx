@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased bg-cover bg-[url('https://w.wallhaven.cc/full/d6/wallhaven-d6jzdg.jpg')]",
+          "min-h-screen bg-background font-sans antialiased bg-cover bg-gray-300",
 
           fontSans.variable
         )}

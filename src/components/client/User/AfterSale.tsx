@@ -2,9 +2,9 @@ import styles from "@/app/dashboard/order/page.module.css";
 import clsx from "clsx";
 import Loading from "@/components/motion/Loading";
 import { useEffect, useState } from "react";
-import IndexCard from "@/components/client/IndexCard";
+import IndexCard from "@/components/client/User/IndexCard";
 
-export default function AllOrders(props: any) {
+export default function AfterSale(props: any) {
   const [indexs, setIndexs] = useState<
     Array<{ _id: string; title: string; introduction: string; date: string }>
   >([]);
