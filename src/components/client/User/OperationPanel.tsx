@@ -15,7 +15,7 @@ export default function OperationPanel(props: any) {
     <main className=" gap-4  shadow-xl sm:mt-[8px] mt-[40px]">
       <Card className="cursor-default grid grid-cols-3 grid-rows-1 gap-4 h-[200px] p-4">
         <CardContent
-          className="rounded-lg flex justify-around items-center bg-yellow-400 "
+          className="rounded-lg flex justify-around items-center  bg-yellow-400 flex-wrap  "
           onClick={() => setOption("AllOrders")}
         >
           <svg
@@ -34,10 +34,12 @@ export default function OperationPanel(props: any) {
             <path d="M5 6h14" />
             <rect width="18" height="12" x="3" y="10" rx="2" />
           </svg>
-          <span className="text-white font-bold text-2xl">收件订单</span>
+          <span className="text-white font-bold sm:text-2xl text-md mt-[-10px]">
+            收件订单
+          </span>
         </CardContent>
         <CardContent
-          className="rounded-lg flex justify-around items-center bg-blue-600"
+          className="rounded-lg flex justify-around items-center  bg-blue-600  flex-wrap "
           onClick={() => setOption("SendOrders")}
         >
           <svg
@@ -60,10 +62,12 @@ export default function OperationPanel(props: any) {
             <path d="M9 18h5" />
             <circle cx="16" cy="18" r="2" />
           </svg>
-          <span className="text-white font-bold text-2xl">寄件信息</span>
+          <span className="text-white font-bold sm:text-2xl text-md mt-[-10px]">
+            寄件信息
+          </span>
         </CardContent>
         <CardContent
-          className="rounded-lg flex justify-around items-center bg-purple-600"
+          className="rounded-lg flex justify-around items-center  bg-purple-600  flex-wrap "
           onClick={() => setOption("AfterSale")}
         >
           <svg
@@ -81,7 +85,9 @@ export default function OperationPanel(props: any) {
             <circle cx="12" cy="5" r="3" />
             <path d="M6.5 8a2 2 0 0 0-1.905 1.46L2.1 18.5A2 2 0 0 0 4 21h16a2 2 0 0 0 1.925-2.54L19.4 9.5A2 2 0 0 0 17.48 8Z" />
           </svg>
-          <span className="text-white font-bold text-2xl">寄件订单</span>
+          <span className="text-white font-bold sm:text-2xl text-md mt-[-10px]">
+            寄件订单
+          </span>
         </CardContent>
       </Card>
     </main>

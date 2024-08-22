@@ -38,13 +38,13 @@ export default function AllOrders(props: any) {
         {data?.data.data.map((item: Field, index: string) => (
           <RecieveCard item={item} key={index} />
         ))}
-        {data?.data.data.length === 0 && (
-          <div className="w-full flex justify-center items-center">
-            {" "}
-            <h1 className="mx-0 font-bold text-2xl mt-[20vh]">暂无订单</h1>
-          </div>
-        )}{" "}
       </div>
+      {data?.data.data.length === 0 && (
+        <div className="w-full flex justify-center items-center">
+          {" "}
+          <h1 className="mx-0 font-bold text-2xl mt-[20vh]">暂无订单</h1>
+        </div>
+      )}{" "}
     </div>
   );
 }
