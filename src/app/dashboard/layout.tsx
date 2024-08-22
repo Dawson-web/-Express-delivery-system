@@ -1,9 +1,12 @@
 "use client";
-import Menu from "@/components/client/menu";
+import Menu from "@/components/client/Menu/menu";
 import { Toaster } from "@/components/ui/sonner";
 import clsx from "clsx";
 import { useState } from "react";
 import RoutingGuard from "../provider/RoutingGuard";
+import { useQuery } from "@tanstack/react-query";
+import { $axios } from "../api";
+import Loading from "@/components/motion/Loading";
 
 export default function DashboardLayout({
   children,
@@ -12,6 +15,7 @@ export default function DashboardLayout({
 }) {
   const [open, setOpen] = useState<boolean>(false);
   RoutingGuard();
+
   return (
     <main
       className={clsx("flex  sm:flex-row  w-full  ", {

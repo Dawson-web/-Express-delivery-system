@@ -34,7 +34,7 @@ export default function OperationPanel(props: any) {
             <path d="M5 6h14" />
             <rect width="18" height="12" x="3" y="10" rx="2" />
           </svg>
-          <span className="text-white font-bold text-2xl">全部订单</span>
+          <span className="text-white font-bold text-2xl">收件订单</span>
         </CardContent>
         <CardContent
           className="rounded-lg flex justify-around items-center bg-blue-600"
@@ -81,7 +81,7 @@ export default function OperationPanel(props: any) {
             <circle cx="12" cy="5" r="3" />
             <path d="M6.5 8a2 2 0 0 0-1.905 1.46L2.1 18.5A2 2 0 0 0 4 21h16a2 2 0 0 0 1.925-2.54L19.4 9.5A2 2 0 0 0 17.48 8Z" />
           </svg>
-          <span className="text-white font-bold text-2xl">售后信息</span>
+          <span className="text-white font-bold text-2xl">寄件订单</span>
         </CardContent>
       </Card>
     </main>

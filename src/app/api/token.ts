@@ -1,3 +1,5 @@
+"use client";
+
 interface LoginResponse {
   isLogin: boolean;
   loginDevice: string;
@@ -24,4 +26,13 @@ export function getValidToken() {
 export function getValidUid() {
   const uid = localStorage.getItem("uid");
   return uid;
+}
+
+export function getValidRole() {
+  const role = localStorage.getItem("role");
+  return role;
+}
+
+export function logout() {
+  localStorage.clear();
 }

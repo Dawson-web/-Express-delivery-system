@@ -22,6 +22,7 @@ import {
   notificationError,
   notificationSuccess,
 } from "@/constants/notifications";
+import Loading from "@/components/motion/Loading";
 
 export interface Field {
   id: string;
@@ -57,7 +58,7 @@ export default function CourieCard(props: any) {
   };
 
   let img = "";
-  const { isSuccess, data, refetch } = useQuery({
+  const { isSuccess, data, refetch, isPending } = useQuery({
     queryKey: ["item"],
     queryFn: () => $axios.get("/item/list", {}),
   });

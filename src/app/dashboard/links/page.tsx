@@ -2,9 +2,9 @@
 
 import { $axios } from "@/app/api";
 import CourieCard from "@/components/client/Courier/CourieCard";
-import IndexCard from "@/components/client/User/IndexCard";
 import StationCard from "@/components/client/Station/StationCard";
 import { useQuery } from "@tanstack/react-query";
+import Loading from "@/components/motion/Loading";
 
 export interface Field {
   id: string;
@@ -21,7 +21,7 @@ export interface Field {
 }
 
 export default function Page(props: any) {
-  const { isSuccess, data, refetch } = useQuery({
+  const { isSuccess, data, refetch, isPending } = useQuery({
     queryKey: ["orderList"],
     queryFn: () => $axios.get("/station/orderList"),
   });
@@ -33,14 +33,17 @@ export default function Page(props: any) {
     queryKey: ["courier_order"],
     queryFn: () => $axios.get("/courier/getMyOrder"),
   });
+  if (isPending || courierList.isPending) {
+    return <Loading />;
+  }
   return (
     <div className="flex flex-row gap-4 flex-wrap  mx-0  ">
-      {isSuccess
+      {localStorage.getItem("role") == "1" && isSuccess
         ? data.data.data.map((item: Field, index: number) => (
             <StationCard key={index} item={item} />
           ))
         : ""}
-      {courierList.isSuccess
+      {localStorage.getItem("role") == "3" && courierList.isSuccess
         ? courierList.data.data.data.map((item: Field, index: number) => (
             <CourieCard key={index} item={item} />
           ))

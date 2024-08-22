@@ -2,20 +2,31 @@ import styles from "@/app/dashboard/order/page.module.css";
 import clsx from "clsx";
 import Loading from "@/components/motion/Loading";
 import { useEffect, useState } from "react";
-import IndexCard from "@/components/client/User/IndexCard";
-
+import RecieveCard from "@/components/client/User/RecieveCard";
+import { useQuery } from "@tanstack/react-query";
+import { $axios } from "@/app/api";
+export interface Field {
+  id: string;
+  additionalInfo: string;
+  companyId: string;
+  isReturn: string;
+  itemId: string;
+  recipientLocation: string;
+  recipientPhone: string;
+  senderLocation: string;
+  senderPhone: string;
+  shippingMethod: string;
+  stationId: string;
+}
 export default function AllOrders(props: any) {
-  const [indexs, setIndexs] = useState<
-    Array<{ _id: string; title: string; introduction: string; date: string }>
-  >([]);
+  const { data, isPending } = useQuery({
+    queryKey: ["receiveOrderList"],
+    queryFn: () => $axios.get("/order/receiveOrderList"),
+  });
+  console.log(data?.data.data);
 
-  useEffect(() => {
-    setIndexs([
-      { _id: "1", title: "title", introduction: "introduction", date: "date" },
-    ]);
-  }, []);
-
-  if (!indexs.length) return <Loading />;
+  if (isPending) return;
+  <Loading />;
   return (
     <div
       className={clsx(
@@ -24,9 +35,15 @@ export default function AllOrders(props: any) {
       )}
     >
       <div className=" gap-2 sm:gap-4 grid md:grid-cols-2 grid-cols-1 ">
-        {indexs.map((index) => (
-          <IndexCard index={index} key={index._id} />
+        {data?.data.data.map((item: Field, index: string) => (
+          <RecieveCard item={item} key={index} />
         ))}
+        {data?.data.data.length === 0 && (
+          <div className="w-full flex justify-center items-center">
+            {" "}
+            <h1 className="mx-0 font-bold text-2xl mt-[20vh]">暂无订单</h1>
+          </div>
+        )}{" "}
       </div>
     </div>
   );

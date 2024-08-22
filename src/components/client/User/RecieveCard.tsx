@@ -9,30 +9,9 @@ import {
 } from "@/components/ui/card";
 import { useState } from "react";
 import { Button } from "../../ui/button";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { $axios } from "@/app/api";
-import { notifications } from "@mantine/notifications";
-import {
-  notificationError,
-  notificationSuccess,
-} from "@/constants/notifications";
-import Loading from "@/components/motion/Loading";
-
-export interface Field {
-  id: string;
-  additionalInfo: string;
-  companyId: string;
-  isReturn: string;
-  itemId: string;
-  recipientLocation: string;
-  recipientPhone: string;
-  senderLocation: string;
-  senderPhone: string;
-  shippingMethod: string;
-  stationId: string;
-}
-
-export default function StationCard(props: any) {
+export default function RecieveCard(props: any) {
   const { item } = props;
   const Status = (status: number) => {
     switch (status) {
@@ -51,24 +30,8 @@ export default function StationCard(props: any) {
     }
   };
 
-  const confirmOrderMutation = useMutation({
-    mutationFn: (v: any) =>
-      $axios.post("/station/confirmOrder", { id: item.id, status: 1 }),
-    onSuccess: () => {
-      notifications.show({
-        ...notificationSuccess,
-        message: "已收件，请尽快发出",
-      });
-    },
-    onError(e) {
-      notifications.show({
-        ...notificationError,
-        message: e.message,
-      });
-    },
-  });
   let img = "";
-  const { isSuccess, data, refetch, isPending } = useQuery({
+  const { data } = useQuery({
     queryKey: ["item"],
     queryFn: () => $axios.get("/item/list", {}),
   });
@@ -85,7 +48,7 @@ export default function StationCard(props: any) {
         <img src={img} alt="image" className="h-24 w-24 object-cover" />
         <CardTitle className="  font-normal break-words h-full overflow-hidden text-ellipsis text-sm  text-gray-600">
           <ul>
-            <li>订单号：{item.id}</li>
+            {/* <li>订单号：{item.id}</li> */}
             <li>寄件人电话号：{item.senderPhone}</li>
             <li>收件人电话号：{item.recipientPhone}</li>
             <li>备注：{item.additionalInfo}</li>
@@ -151,22 +114,7 @@ export default function StationCard(props: any) {
         </div>
         <div className="items-start"></div>
       </CardContent>
-      <CardFooter className="flex justify-end self-end mt-[-10px]">
-        {item.status == 0 ? (
-          <div className="flex gap-2 ">
-            <Button
-              className="bg-blue-600 hover:bg-blue-700 text-white"
-              onClick={() => {
-                confirmOrderMutation.mutate(item.id);
-              }}
-            >
-              确认收货
-            </Button>
-          </div>
-        ) : (
-          ""
-        )}
-      </CardFooter>
+      <CardFooter className="flex justify-end self-end mt-[-10px]"></CardFooter>
     </Card>
   );
 }

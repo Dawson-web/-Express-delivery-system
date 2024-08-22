@@ -42,7 +42,12 @@ export default function LoginForm() {
         message: "登录成功",
       });
       setToken(res.data.data);
-      router.push("/dashboard");
+      $axios.get("/user/myInfo").then((_res) => {
+        console.log(_res.data.data);
+
+        localStorage.setItem("role", _res.data.data.role);
+        router.push("/dashboard");
+      });
     },
     onError(e) {
       notifications.show({
