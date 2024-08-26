@@ -29,6 +29,18 @@ $axios.interceptors.response.use(
         }
         return response;
       }
+      case code === 400: // Bad Request
+        return Promise.reject(new Error(`请求错误: ${code}`));
+      case code === 401: // Unauthorized
+        return Promise.reject(new Error(`未授权: ${code}`));
+      case code === 403: // Forbidden
+        return Promise.reject(new Error(`禁止访问: ${code}`));
+      case code === 404: // Not Found
+        return Promise.reject(new Error(`未找到资源: ${code}`));
+      case code === 405: // Method Not Allowed
+        return Promise.reject(new Error(`方法不允许: ${code}`));
+      case code === 415: // Unsupported Media Type
+        return Promise.reject(new Error(`不支持的媒体类型: ${code}`));
       case code >= 400 && code < 500:
         return Promise.reject(new Error(`客户端错误: ${code}`));
       case code >= 500 && code < 600:

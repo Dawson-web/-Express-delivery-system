@@ -1,15 +1,15 @@
-Date : 2024-08-22 07:44:47
+Date : 2024-08-26 13:36:56
 Directory : f:\毕设-快递系统
-Total : 69 files,  19761 codes, 28 comments, 465 blanks, all 20254 lines
+Total : 75 files,  22295 codes, 130 comments, 654 blanks, all 23079 lines
 
 Languages
 +--------------------+------------+------------+------------+------------+------------+
 | language           | files      | code       | comment    | blank      | total      |
 +--------------------+------------+------------+------------+------------+------------+
 | JSON               |          3 |     13,974 |          0 |          2 |     13,976 |
-| TypeScript JSX     |         45 |      4,520 |         24 |        263 |      4,807 |
-| CSS                |          5 |        980 |          1 |        151 |      1,132 |
-| TypeScript         |          9 |        225 |          1 |         29 |        255 |
+| TypeScript JSX     |         51 |      5,706 |         31 |        301 |      6,038 |
+| CSS                |          5 |      2,067 |         60 |        266 |      2,393 |
+| TypeScript         |          9 |        486 |         37 |         65 |        588 |
 | JSON with Comments |          2 |         29 |          0 |          2 |         31 |
 | Markdown           |          1 |         23 |          0 |         14 |         37 |
 | JavaScript         |          2 |          8 |          2 |          4 |         14 |
@@ -20,34 +20,37 @@ Directories
 +--------------------------------------------------------------+------------+------------+------------+------------+------------+
 | path                                                         | files      | code       | comment    | blank      | total      |
 +--------------------------------------------------------------+------------+------------+------------+------------+------------+
-| .                                                            |         69 |     19,761 |         28 |        465 |     20,254 |
+| .                                                            |         75 |     22,295 |        130 |        654 |     23,079 |
 | . (Files)                                                    |          9 |     14,122 |          3 |         26 |     14,151 |
 | public                                                       |          2 |          2 |          0 |          0 |          2 |
-| src                                                          |         58 |      5,637 |         25 |        439 |      6,101 |
-| src\app                                                      |         21 |        564 |          6 |         91 |        661 |
-| src\app (Files)                                              |          5 |        226 |          1 |         36 |        263 |
-| src\app\api                                                  |          3 |         75 |          0 |         11 |         86 |
-| src\app\dashboard                                            |          8 |        219 |          5 |         27 |        251 |
-| src\app\dashboard (Files)                                    |          2 |         34 |          0 |          5 |         39 |
-| src\app\dashboard\control                                    |          1 |         51 |          0 |          2 |         53 |
-| src\app\dashboard\links                                      |          1 |         47 |          0 |          4 |         51 |
+| src                                                          |         64 |      8,171 |        127 |        628 |      8,926 |
+| src\app                                                      |         21 |      1,272 |         67 |        180 |      1,519 |
+| src\app (Files)                                              |          5 |        617 |         37 |         69 |        723 |
+| src\app\api                                                  |          3 |         95 |          0 |         14 |        109 |
+| src\app\dashboard                                            |          8 |        512 |         30 |         80 |        622 |
+| src\app\dashboard (Files)                                    |          2 |         37 |          0 |          6 |         43 |
+| src\app\dashboard\control                                    |          1 |         56 |          0 |          4 |         60 |
+| src\app\dashboard\links                                      |          1 |         50 |          0 |          4 |         54 |
 | src\app\dashboard\me                                         |          1 |         10 |          0 |          3 |         13 |
-| src\app\dashboard\order                                      |          3 |         77 |          5 |         13 |         95 |
-| src\app\dashboard\order (Files)                              |          2 |         37 |          0 |          5 |         42 |
+| src\app\dashboard\order                                      |          3 |        359 |         30 |         63 |        452 |
+| src\app\dashboard\order (Files)                              |          2 |        319 |         25 |         55 |        399 |
 | src\app\dashboard\order\[slug]                               |          1 |         40 |          5 |          8 |         53 |
 | src\app\login                                                |          1 |          9 |          0 |          3 |         12 |
-| src\app\provider                                             |          2 |         17 |          0 |         10 |         27 |
+| src\app\provider                                             |          2 |         21 |          0 |         10 |         31 |
 | src\app\register                                             |          1 |          9 |          0 |          2 |         11 |
 | src\app\seekback                                             |          1 |          9 |          0 |          2 |         11 |
-| src\components                                               |         33 |      5,024 |         19 |        338 |      5,381 |
-| src\components\client                                        |         21 |      3,400 |         18 |        108 |      3,526 |
-| src\components\client (Files)                                |          7 |      1,119 |          6 |         30 |      1,155 |
+| src\components                                               |         39 |      6,850 |         60 |        438 |      7,348 |
+| src\components\client                                        |         27 |      5,226 |         59 |        208 |      5,493 |
+| src\components\client (Files)                                |          6 |      1,604 |         40 |         91 |      1,735 |
 | src\components\client\Company                                |          1 |        200 |          0 |          2 |        202 |
 | src\components\client\Controler                              |          1 |         75 |          0 |          6 |         81 |
-| src\components\client\Courier                                |          1 |        316 |          1 |         13 |        330 |
-| src\components\client\Menu                                   |          2 |        120 |          0 |          6 |        126 |
-| src\components\client\Station                                |          2 |        366 |          0 |         10 |        376 |
-| src\components\client\User                                   |          7 |      1,204 |         11 |         41 |      1,256 |
+| src\components\client\Courier                                |          1 |        317 |          1 |         13 |        331 |
+| src\components\client\Form                                   |          4 |        923 |          6 |         26 |        955 |
+| src\components\client\Menu                                   |          3 |        404 |          0 |         11 |        415 |
+| src\components\client\Station                                |          2 |        367 |          0 |         10 |        377 |
+| src\components\client\User                                   |          7 |      1,265 |         12 |         40 |      1,317 |
+| src\components\client\img_card                               |          1 |         37 |          0 |          5 |         42 |
+| src\components\client\user_avatar                            |          1 |         34 |          0 |          4 |         38 |
 | src\components\motion                                        |          2 |        848 |          1 |        137 |        986 |
 | src\components\ui                                            |         10 |        776 |          0 |         93 |        869 |
 | src\config                                                   |          1 |          9 |          0 |          1 |         10 |
@@ -69,48 +72,54 @@ Files
 | f:\毕设-快递系统\postcss.config.mjs                                | JavaScript         |          6 |          1 |          2 |          9 |
 | f:\毕设-快递系统\public\next.svg                                   | XML                |          1 |          0 |          0 |          1 |
 | f:\毕设-快递系统\public\vercel.svg                                 | XML                |          1 |          0 |          0 |          1 |
-| f:\毕设-快递系统\src\app\api\index.ts                              | TypeScript         |         37 |          0 |          5 |         42 |
-| f:\毕设-快递系统\src\app\api\token.ts                              | TypeScript         |         25 |          0 |          3 |         28 |
+| f:\毕设-快递系统\src\app\api\index.ts                              | TypeScript         |         49 |          0 |          5 |         54 |
+| f:\毕设-快递系统\src\app\api\token.ts                              | TypeScript         |         33 |          0 |          6 |         39 |
 | f:\毕设-快递系统\src\app\api\types.ts                              | TypeScript         |         13 |          0 |          3 |         16 |
 | f:\毕设-快递系统\src\app\color.css                                 | CSS                |        109 |          0 |          4 |        113 |
-| f:\毕设-快递系统\src\app\dashboard\control\page.tsx                | TypeScript JSX     |         51 |          0 |          2 |         53 |
-| f:\毕设-快递系统\src\app\dashboard\layout.tsx                      | TypeScript JSX     |         30 |          0 |          3 |         33 |
-| f:\毕设-快递系统\src\app\dashboard\links\page.tsx                  | TypeScript JSX     |         47 |          0 |          4 |         51 |
+| f:\毕设-快递系统\src\app\dashboard\control\page.tsx                | TypeScript JSX     |         56 |          0 |          4 |         60 |
+| f:\毕设-快递系统\src\app\dashboard\layout.tsx                      | TypeScript JSX     |         33 |          0 |          4 |         37 |
+| f:\毕设-快递系统\src\app\dashboard\links\page.tsx                  | TypeScript JSX     |         50 |          0 |          4 |         54 |
 | f:\毕设-快递系统\src\app\dashboard\me\page.tsx                     | TypeScript JSX     |         10 |          0 |          3 |         13 |
 | f:\毕设-快递系统\src\app\dashboard\order\[slug]\page.tsx           | TypeScript JSX     |         40 |          5 |          8 |         53 |
-| f:\毕设-快递系统\src\app\dashboard\order\page.module.css           | CSS                |         20 |          0 |          2 |         22 |
+| f:\毕设-快递系统\src\app\dashboard\order\page.module.css           | CSS                |        302 |         25 |         52 |        379 |
 | f:\毕设-快递系统\src\app\dashboard\order\page.tsx                  | TypeScript JSX     |         17 |          0 |          3 |         20 |
 | f:\毕设-快递系统\src\app\dashboard\page.tsx                        | TypeScript JSX     |          4 |          0 |          2 |          6 |
-| f:\毕设-快递系统\src\app\fonts.ts                                  | TypeScript         |         13 |          0 |          4 |         17 |
-| f:\毕设-快递系统\src\app\globals.css                               | CSS                |         56 |          0 |         21 |         77 |
+| f:\毕设-快递系统\src\app\fonts.ts                                  | TypeScript         |        254 |         36 |         37 |        327 |
+| f:\毕设-快递系统\src\app\globals.css                               | CSS                |        206 |          0 |         21 |        227 |
 | f:\毕设-快递系统\src\app\layout.tsx                                | TypeScript JSX     |         40 |          1 |          6 |         47 |
 | f:\毕设-快递系统\src\app\login\page.tsx                            | TypeScript JSX     |          9 |          0 |          3 |         12 |
 | f:\毕设-快递系统\src\app\page.tsx                                  | TypeScript JSX     |          8 |          0 |          1 |          9 |
 | f:\毕设-快递系统\src\app\provider\ReactQueryProvider.tsx           | TypeScript JSX     |          9 |          0 |          5 |         14 |
-| f:\毕设-快递系统\src\app\provider\RoutingGuard.tsx                 | TypeScript JSX     |          8 |          0 |          5 |         13 |
+| f:\毕设-快递系统\src\app\provider\RoutingGuard.tsx                 | TypeScript JSX     |         12 |          0 |          5 |         17 |
 | f:\毕设-快递系统\src\app\register\page.tsx                         | TypeScript JSX     |          9 |          0 |          2 |         11 |
 | f:\毕设-快递系统\src\app\seekback\page.tsx                         | TypeScript JSX     |          9 |          0 |          2 |         11 |
 | f:\毕设-快递系统\src\components\client\Company\AddCompany.tsx      | TypeScript JSX     |        200 |          0 |          2 |        202 |
 | f:\毕设-快递系统\src\components\client\ControlButton.tsx           | TypeScript JSX     |         67 |          0 |          4 |         71 |
 | f:\毕设-快递系统\src\components\client\Controler\UserRole.tsx      | TypeScript JSX     |         75 |          0 |          6 |         81 |
-| f:\毕设-快递系统\src\components\client\Courier\CourieCard.tsx      | TypeScript JSX     |        316 |          1 |         13 |        330 |
-| f:\毕设-快递系统\src\components\client\LoginForm.tsx               | TypeScript JSX     |        174 |          1 |          2 |        177 |
+| f:\毕设-快递系统\src\components\client\Courier\CourieCard.tsx      | TypeScript JSX     |        317 |          1 |         13 |        331 |
+| f:\毕设-快递系统\src\components\client\Form\LoginForm.tsx          | TypeScript JSX     |        178 |          1 |          3 |        182 |
+| f:\毕设-快递系统\src\components\client\Form\RegisterForm.tsx       | TypeScript JSX     |        355 |          3 |          9 |        367 |
+| f:\毕设-快递系统\src\components\client\Form\SeekBackForm.tsx       | TypeScript JSX     |        314 |          2 |          8 |        324 |
+| f:\毕设-快递系统\src\components\client\Form\index.tsx              | TypeScript JSX     |         76 |          0 |          6 |         82 |
+| f:\毕设-快递系统\src\components\client\LoginForm.tsx               | TypeScript JSX     |        178 |          1 |          3 |        182 |
 | f:\毕设-快递系统\src\components\client\Menu\DarkMode.tsx           | TypeScript JSX     |         65 |          0 |          3 |         68 |
 | f:\毕设-快递系统\src\components\client\Menu\NavOpen.tsx            | TypeScript JSX     |         55 |          0 |          3 |         58 |
+| f:\毕设-快递系统\src\components\client\Menu\menu.tsx               | TypeScript JSX     |        284 |          0 |          5 |        289 |
 | f:\毕设-快递系统\src\components\client\RegisterForm.tsx            | TypeScript JSX     |        355 |          3 |          9 |        367 |
 | f:\毕设-快递系统\src\components\client\RenderComponent.tsx         | TypeScript JSX     |         24 |          0 |          2 |         26 |
 | f:\毕设-快递系统\src\components\client\SeekBackForm.tsx            | TypeScript JSX     |        314 |          2 |          8 |        324 |
 | f:\毕设-快递系统\src\components\client\Station\AddStation.tsx      | TypeScript JSX     |        201 |          0 |          3 |        204 |
-| f:\毕设-快递系统\src\components\client\Station\StationCard.tsx     | TypeScript JSX     |        165 |          0 |          7 |        172 |
-| f:\毕设-快递系统\src\components\client\User\AfterSale.tsx          | TypeScript JSX     |         30 |          0 |          4 |         34 |
-| f:\毕设-快递系统\src\components\client\User\AllOrders.tsx          | TypeScript JSX     |         30 |          0 |          4 |         34 |
+| f:\毕设-快递系统\src\components\client\Station\StationCard.tsx     | TypeScript JSX     |        166 |          0 |          7 |        173 |
+| f:\毕设-快递系统\src\components\client\User\AfterSale.tsx          | TypeScript JSX     |         49 |          0 |          2 |         51 |
+| f:\毕设-快递系统\src\components\client\User\AllOrders.tsx          | TypeScript JSX     |         49 |          0 |          2 |         51 |
 | f:\毕设-快递系统\src\components\client\User\EditUserInfoButton.tsx | TypeScript JSX     |        212 |          0 |          6 |        218 |
-| f:\毕设-快递系统\src\components\client\User\IndexCard.tsx          | TypeScript JSX     |         93 |          0 |          2 |         95 |
-| f:\毕设-快递系统\src\components\client\User\OperationPanel.tsx     | TypeScript JSX     |         88 |          0 |          2 |         90 |
+| f:\毕设-快递系统\src\components\client\User\OperationPanel.tsx     | TypeScript JSX     |         94 |          0 |          2 |         96 |
 | f:\毕设-快递系统\src\components\client\User\ProfileCard.tsx        | TypeScript JSX     |        206 |         10 |          8 |        224 |
-| f:\毕设-快递系统\src\components\client\User\SendOrders.tsx         | TypeScript JSX     |        545 |          1 |         15 |        561 |
-| f:\毕设-快递系统\src\components\client\menu.tsx                    | TypeScript JSX     |        174 |          0 |          5 |        179 |
-| f:\毕设-快递系统\src\components\client\scroller.module.css         | CSS                |         11 |          0 |          0 |         11 |
+| f:\毕设-快递系统\src\components\client\User\RecieveCard.tsx        | TypeScript JSX     |        115 |          1 |          5 |        121 |
+| f:\毕设-快递系统\src\components\client\User\SendOrders.tsx         | TypeScript JSX     |        540 |          1 |         15 |        556 |
+| f:\毕设-快递系统\src\components\client\img_card\index.tsx          | TypeScript JSX     |         37 |          0 |          5 |         42 |
+| f:\毕设-快递系统\src\components\client\scroller.module.css         | CSS                |        666 |         34 |         65 |        765 |
+| f:\毕设-快递系统\src\components\client\user_avatar\index.tsx       | TypeScript JSX     |         34 |          0 |          4 |         38 |
 | f:\毕设-快递系统\src\components\motion\Loading.tsx                 | TypeScript JSX     |         64 |          0 |         13 |         77 |
 | f:\毕设-快递系统\src\components\motion\styles.module.css           | CSS                |        784 |          1 |        124 |        909 |
 | f:\毕设-快递系统\src\components\ui\alert.tsx                       | TypeScript JSX     |         53 |          0 |          7 |         60 |
@@ -129,5 +138,5 @@ Files
 | f:\毕设-快递系统\src\utils\jd.ts                                   | TypeScript         |         18 |          0 |          2 |         20 |
 | f:\毕设-快递系统\tailwind.config.ts                                | TypeScript         |         88 |          1 |          4 |         93 |
 | f:\毕设-快递系统\tsconfig.json                                     | JSON with Comments |         26 |          0 |          1 |         27 |
-| Total                                                        |                    |     19,761 |         28 |        465 |     20,254 |
+| Total                                                        |                    |     22,295 |        130 |        654 |     23,079 |
 +--------------------------------------------------------------+--------------------+------------+------------+------------+------------+

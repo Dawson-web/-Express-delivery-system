@@ -1,10 +1,10 @@
 # Details
 
-Date : 2024-08-22 07:44:47
+Date : 2024-08-26 13:36:56
 
 Directory f:\\毕设-快递系统
 
-Total : 69 files,  19761 codes, 28 comments, 465 blanks, all 20254 lines
+Total : 75 files,  22295 codes, 130 comments, 654 blanks, all 23079 lines
 
 [Summary](results.md) / Details / [Diff Summary](diff.md) / [Diff Details](diff-details.md)
 
@@ -20,48 +20,54 @@ Total : 69 files,  19761 codes, 28 comments, 465 blanks, all 20254 lines
 | [postcss.config.mjs](/postcss.config.mjs) | JavaScript | 6 | 1 | 2 | 9 |
 | [public/next.svg](/public/next.svg) | XML | 1 | 0 | 0 | 1 |
 | [public/vercel.svg](/public/vercel.svg) | XML | 1 | 0 | 0 | 1 |
-| [src/app/api/index.ts](/src/app/api/index.ts) | TypeScript | 37 | 0 | 5 | 42 |
-| [src/app/api/token.ts](/src/app/api/token.ts) | TypeScript | 25 | 0 | 3 | 28 |
+| [src/app/api/index.ts](/src/app/api/index.ts) | TypeScript | 49 | 0 | 5 | 54 |
+| [src/app/api/token.ts](/src/app/api/token.ts) | TypeScript | 33 | 0 | 6 | 39 |
 | [src/app/api/types.ts](/src/app/api/types.ts) | TypeScript | 13 | 0 | 3 | 16 |
 | [src/app/color.css](/src/app/color.css) | CSS | 109 | 0 | 4 | 113 |
-| [src/app/dashboard/control/page.tsx](/src/app/dashboard/control/page.tsx) | TypeScript JSX | 51 | 0 | 2 | 53 |
-| [src/app/dashboard/layout.tsx](/src/app/dashboard/layout.tsx) | TypeScript JSX | 30 | 0 | 3 | 33 |
-| [src/app/dashboard/links/page.tsx](/src/app/dashboard/links/page.tsx) | TypeScript JSX | 47 | 0 | 4 | 51 |
+| [src/app/dashboard/control/page.tsx](/src/app/dashboard/control/page.tsx) | TypeScript JSX | 56 | 0 | 4 | 60 |
+| [src/app/dashboard/layout.tsx](/src/app/dashboard/layout.tsx) | TypeScript JSX | 33 | 0 | 4 | 37 |
+| [src/app/dashboard/links/page.tsx](/src/app/dashboard/links/page.tsx) | TypeScript JSX | 50 | 0 | 4 | 54 |
 | [src/app/dashboard/me/page.tsx](/src/app/dashboard/me/page.tsx) | TypeScript JSX | 10 | 0 | 3 | 13 |
 | [src/app/dashboard/order/[slug]/page.tsx](/src/app/dashboard/order/%5Bslug%5D/page.tsx) | TypeScript JSX | 40 | 5 | 8 | 53 |
-| [src/app/dashboard/order/page.module.css](/src/app/dashboard/order/page.module.css) | CSS | 20 | 0 | 2 | 22 |
+| [src/app/dashboard/order/page.module.css](/src/app/dashboard/order/page.module.css) | CSS | 302 | 25 | 52 | 379 |
 | [src/app/dashboard/order/page.tsx](/src/app/dashboard/order/page.tsx) | TypeScript JSX | 17 | 0 | 3 | 20 |
 | [src/app/dashboard/page.tsx](/src/app/dashboard/page.tsx) | TypeScript JSX | 4 | 0 | 2 | 6 |
-| [src/app/fonts.ts](/src/app/fonts.ts) | TypeScript | 13 | 0 | 4 | 17 |
-| [src/app/globals.css](/src/app/globals.css) | CSS | 56 | 0 | 21 | 77 |
+| [src/app/fonts.ts](/src/app/fonts.ts) | TypeScript | 254 | 36 | 37 | 327 |
+| [src/app/globals.css](/src/app/globals.css) | CSS | 206 | 0 | 21 | 227 |
 | [src/app/layout.tsx](/src/app/layout.tsx) | TypeScript JSX | 40 | 1 | 6 | 47 |
 | [src/app/login/page.tsx](/src/app/login/page.tsx) | TypeScript JSX | 9 | 0 | 3 | 12 |
 | [src/app/page.tsx](/src/app/page.tsx) | TypeScript JSX | 8 | 0 | 1 | 9 |
 | [src/app/provider/ReactQueryProvider.tsx](/src/app/provider/ReactQueryProvider.tsx) | TypeScript JSX | 9 | 0 | 5 | 14 |
-| [src/app/provider/RoutingGuard.tsx](/src/app/provider/RoutingGuard.tsx) | TypeScript JSX | 8 | 0 | 5 | 13 |
+| [src/app/provider/RoutingGuard.tsx](/src/app/provider/RoutingGuard.tsx) | TypeScript JSX | 12 | 0 | 5 | 17 |
 | [src/app/register/page.tsx](/src/app/register/page.tsx) | TypeScript JSX | 9 | 0 | 2 | 11 |
 | [src/app/seekback/page.tsx](/src/app/seekback/page.tsx) | TypeScript JSX | 9 | 0 | 2 | 11 |
 | [src/components/client/Company/AddCompany.tsx](/src/components/client/Company/AddCompany.tsx) | TypeScript JSX | 200 | 0 | 2 | 202 |
 | [src/components/client/ControlButton.tsx](/src/components/client/ControlButton.tsx) | TypeScript JSX | 67 | 0 | 4 | 71 |
 | [src/components/client/Controler/UserRole.tsx](/src/components/client/Controler/UserRole.tsx) | TypeScript JSX | 75 | 0 | 6 | 81 |
-| [src/components/client/Courier/CourieCard.tsx](/src/components/client/Courier/CourieCard.tsx) | TypeScript JSX | 316 | 1 | 13 | 330 |
-| [src/components/client/LoginForm.tsx](/src/components/client/LoginForm.tsx) | TypeScript JSX | 174 | 1 | 2 | 177 |
+| [src/components/client/Courier/CourieCard.tsx](/src/components/client/Courier/CourieCard.tsx) | TypeScript JSX | 317 | 1 | 13 | 331 |
+| [src/components/client/Form/LoginForm.tsx](/src/components/client/Form/LoginForm.tsx) | TypeScript JSX | 178 | 1 | 3 | 182 |
+| [src/components/client/Form/RegisterForm.tsx](/src/components/client/Form/RegisterForm.tsx) | TypeScript JSX | 355 | 3 | 9 | 367 |
+| [src/components/client/Form/SeekBackForm.tsx](/src/components/client/Form/SeekBackForm.tsx) | TypeScript JSX | 314 | 2 | 8 | 324 |
+| [src/components/client/Form/index.tsx](/src/components/client/Form/index.tsx) | TypeScript JSX | 76 | 0 | 6 | 82 |
+| [src/components/client/LoginForm.tsx](/src/components/client/LoginForm.tsx) | TypeScript JSX | 178 | 1 | 3 | 182 |
 | [src/components/client/Menu/DarkMode.tsx](/src/components/client/Menu/DarkMode.tsx) | TypeScript JSX | 65 | 0 | 3 | 68 |
 | [src/components/client/Menu/NavOpen.tsx](/src/components/client/Menu/NavOpen.tsx) | TypeScript JSX | 55 | 0 | 3 | 58 |
+| [src/components/client/Menu/menu.tsx](/src/components/client/Menu/menu.tsx) | TypeScript JSX | 284 | 0 | 5 | 289 |
 | [src/components/client/RegisterForm.tsx](/src/components/client/RegisterForm.tsx) | TypeScript JSX | 355 | 3 | 9 | 367 |
 | [src/components/client/RenderComponent.tsx](/src/components/client/RenderComponent.tsx) | TypeScript JSX | 24 | 0 | 2 | 26 |
 | [src/components/client/SeekBackForm.tsx](/src/components/client/SeekBackForm.tsx) | TypeScript JSX | 314 | 2 | 8 | 324 |
 | [src/components/client/Station/AddStation.tsx](/src/components/client/Station/AddStation.tsx) | TypeScript JSX | 201 | 0 | 3 | 204 |
-| [src/components/client/Station/StationCard.tsx](/src/components/client/Station/StationCard.tsx) | TypeScript JSX | 165 | 0 | 7 | 172 |
-| [src/components/client/User/AfterSale.tsx](/src/components/client/User/AfterSale.tsx) | TypeScript JSX | 30 | 0 | 4 | 34 |
-| [src/components/client/User/AllOrders.tsx](/src/components/client/User/AllOrders.tsx) | TypeScript JSX | 30 | 0 | 4 | 34 |
+| [src/components/client/Station/StationCard.tsx](/src/components/client/Station/StationCard.tsx) | TypeScript JSX | 166 | 0 | 7 | 173 |
+| [src/components/client/User/AfterSale.tsx](/src/components/client/User/AfterSale.tsx) | TypeScript JSX | 49 | 0 | 2 | 51 |
+| [src/components/client/User/AllOrders.tsx](/src/components/client/User/AllOrders.tsx) | TypeScript JSX | 49 | 0 | 2 | 51 |
 | [src/components/client/User/EditUserInfoButton.tsx](/src/components/client/User/EditUserInfoButton.tsx) | TypeScript JSX | 212 | 0 | 6 | 218 |
-| [src/components/client/User/IndexCard.tsx](/src/components/client/User/IndexCard.tsx) | TypeScript JSX | 93 | 0 | 2 | 95 |
-| [src/components/client/User/OperationPanel.tsx](/src/components/client/User/OperationPanel.tsx) | TypeScript JSX | 88 | 0 | 2 | 90 |
+| [src/components/client/User/OperationPanel.tsx](/src/components/client/User/OperationPanel.tsx) | TypeScript JSX | 94 | 0 | 2 | 96 |
 | [src/components/client/User/ProfileCard.tsx](/src/components/client/User/ProfileCard.tsx) | TypeScript JSX | 206 | 10 | 8 | 224 |
-| [src/components/client/User/SendOrders.tsx](/src/components/client/User/SendOrders.tsx) | TypeScript JSX | 545 | 1 | 15 | 561 |
-| [src/components/client/menu.tsx](/src/components/client/menu.tsx) | TypeScript JSX | 174 | 0 | 5 | 179 |
-| [src/components/client/scroller.module.css](/src/components/client/scroller.module.css) | CSS | 11 | 0 | 0 | 11 |
+| [src/components/client/User/RecieveCard.tsx](/src/components/client/User/RecieveCard.tsx) | TypeScript JSX | 115 | 1 | 5 | 121 |
+| [src/components/client/User/SendOrders.tsx](/src/components/client/User/SendOrders.tsx) | TypeScript JSX | 540 | 1 | 15 | 556 |
+| [src/components/client/img_card/index.tsx](/src/components/client/img_card/index.tsx) | TypeScript JSX | 37 | 0 | 5 | 42 |
+| [src/components/client/scroller.module.css](/src/components/client/scroller.module.css) | CSS | 666 | 34 | 65 | 765 |
+| [src/components/client/user_avatar/index.tsx](/src/components/client/user_avatar/index.tsx) | TypeScript JSX | 34 | 0 | 4 | 38 |
 | [src/components/motion/Loading.tsx](/src/components/motion/Loading.tsx) | TypeScript JSX | 64 | 0 | 13 | 77 |
 | [src/components/motion/styles.module.css](/src/components/motion/styles.module.css) | CSS | 784 | 1 | 124 | 909 |
 | [src/components/ui/alert.tsx](/src/components/ui/alert.tsx) | TypeScript JSX | 53 | 0 | 7 | 60 |
