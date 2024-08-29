@@ -80,7 +80,7 @@ export default function StationCard(props: any) {
   }
 
   return (
-    <Card className="  shadow-lg w-full   ">
+    <Card className="  shadow-lg w-[70vw] min-w-[320px]   ">
       <CardHeader className="felx  flex-row items-start justify-start gap-8">
         <img src={img} alt="image" className="h-24 w-24 object-cover" />
         <CardTitle className="  font-normal break-words h-full overflow-hidden text-ellipsis text-sm  text-gray-600">
